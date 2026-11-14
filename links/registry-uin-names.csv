@@ -1,0 +1,656 @@
+uin,registry_product_name,insurer_legal_name,line_of_business
+101B014V02,HDFC Life Critical Illness Plus Rider,HDFC Life Insurance Company Limited,health
+101B031V02,HDFC Life Health Plus Rider - Non Linked,HDFC Life Insurance Company Limited,life
+101B040V01,HDFC Life Protect Plus Rider - Non Linked,HDFC Life Insurance Company Limited,life
+101B041V01,HDFC Life Income Benefit on Accidental Disability Rider - Non Linked,HDFC Life Insurance Company Limited,health
+101N139V08,HDFC Life Click 2 Protect Life,HDFC Life Insurance Company Limited,life
+101N177V04,HDFC Life Sanchay Legacy (Life option) 12,HDFC Life Insurance Company Limited,life
+101N179V01,HDFC Life Click 2 Protect Ultimate,HDFC Life Insurance Company Limited,life
+101N186V09,HDFC Life Click 2 Achieve,HDFC Life Insurance Company Limited,life
+101N189V04,HDFC Life Click 2 Protect Supreme Plus,HDFC Life Insurance Company Limited,life
+101N190V01,HDFC Life Easy Protect A,HDFC Life Insurance Company Limited,life
+101N193V01,HDFC Life Click 2 Protect Elite Pro,HDFC Life Insurance Company Limited,life
+109A024V01,ABSLI Accidental Death Benefit Rider Plus,Aditya Birla Sun Life Insurance Co. Ltd.,health
+109A039V01,ABSLI Waiver of Premium Rider,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109A041V01,ABSLI Comprehensive Critical Illness Rider,Aditya Birla Sun Life Insurance Co. Ltd.,health
+109A042V01,ABSLI Suraksha Term Rider,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109A045V01,ABSLI Suraksha Term Rider Plus,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109B015V03,ABSLI Surgical Care Rider,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109B016V03,ABSLI Hospital Care Rider,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109B017V03,ABSLI Waiver of Premium Rider,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109B018V03,ABSLI Accidental Death and Disability Rider,Aditya Birla Sun Life Insurance Co. Ltd.,health
+109B019V03,ABSLI Critical Illness Rider,Aditya Birla Sun Life Insurance Co. Ltd.,health
+109B023V02,ABSLI Accidental Death Benefit Rider Plus,Aditya Birla Sun Life Insurance Co. Ltd.,health
+109B046V01,ABSLI Suraksha Term Rider Plus,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109N103V03,ABSLI Cancer Shield Plan,Aditya Birla Sun Life Insurance Co. Ltd.,health
+109N108V13,ABSLI DigiShield Plan,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109N128V01,ABSLI Saral Jeevan Bima,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109N138V05,ABSLI Poorna Suraksha Kawach,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109N141V04,ABSLI Salaried Term Plan,Aditya Birla Sun Life Insurance Co. Ltd.,life
+109N146V02,ABSLI Income Suraksha Plan,Aditya Birla Sun Life Insurance Co. Ltd.,life
+116B056V01,Bajaj Life Family Protect Rider - Child Care variant,Bajaj Life Insurance Limited,life
+116B058V01,Bajaj Life New Critical Illness Benefit Rider - Comprehensive variant,Bajaj Life Insurance Limited,health
+116B062V01,Bajaj Life Care Plus Rider Non-Linked,Bajaj Life Insurance Limited,life
+116N165V01,Bajaj Life Saral Jeevan Bima,Bajaj Life Insurance Limited,life
+116N198V01,Bajaj Life eTouch II,Bajaj Life Insurance Limited,life
+116N198V10,Bajaj Life eTouch II,Bajaj Life Insurance Limited,life
+116N208V03,Bajaj Life iSecure II,Bajaj Life Insurance Limited,life
+117B020V04,PNB MetLife Accidental Death Benefit Rider Plus,PNB MetLife India Insurance Company Limited,health
+117B021V04,PNB MetLife Serious Illness Rider,PNB MetLife India Insurance Company Limited,health
+117B022V03,PNB MetLife Accidental Disability Benefit Rider,PNB MetLife India Insurance Company Limited,health
+117B023V03,PNB MetLife Critical Illness Rider,PNB MetLife India Insurance Company Limited,health
+121N149V02,INL Super Suraksha Plus,IndusInd Nippon Life Insurance Company Limited,life
+127A003V01,Sahara Premium Waiver Benefit Rider for Unit Linked Plan,Sahara India Life Insurance Co. Ltd.,life
+127B001V01,Sahara Accidental Death Benefit and Accidental Total and Permanent Disability Benefit Rider,Sahara India Life Insurance Co. Ltd.,life
+127B002V01,Sahara Critical Illness Rider,Sahara India Life Insurance Co. Ltd.,life
+127B005V01,Sahara Accidental Death Bebefit Rider,Sahara India Life Insurance Co. Ltd.,life
+127L007V01,Sahara Sanchay,Sahara India Life Insurance Co. Ltd.,life
+127L011V01,Sahara Ankur,Sahara India Life Insurance Co. Ltd.,life
+127L011V02,Sahara Ankur,Sahara India Life Insurance Co. Ltd.,life
+127L012V01,Sahara Sanchay - R,Sahara India Life Insurance Co. Ltd.,life
+127L012V02,Sahara Sanchay - R,Sahara India Life Insurance Co. Ltd.,life
+127L014V01,Sahara Swabhimaan,Sahara India Life Insurance Co. Ltd.,life
+127L014V02,Sahara Swabhimaan,Sahara India Life Insurance Co. Ltd.,life
+127L015V01,Sahara Samooh Samyojna,Sahara India Life Insurance Co. Ltd.,life
+127L017V01,Sahara Samarth,Sahara India Life Insurance Co. Ltd.,life
+127L017V02,Sahara Samarth,Sahara India Life Insurance Co. Ltd.,life
+127L018V01,Sahara Vishesh,Sahara India Life Insurance Co. Ltd.,life
+127L018V02,Sahara Vishesh,Sahara India Life Insurance Co. Ltd.,life
+127L020V01,Sahara Sanmanvay,Sahara India Life Insurance Co. Ltd.,life
+127L021V01,Sahara Shikhar Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127L022V01,Sahara Utkarsh jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127L023V01,Sahara Sugam Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127L024V01,Sahara Sanchit Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N001V01,Sahara Nidhi,Sahara India Life Insurance Co. Ltd.,life
+127N002V01,Sahara Sampann,Sahara India Life Insurance Co. Ltd.,life
+127N003V01,Sahara Amar Jeevan,Sahara India Life Insurance Co. Ltd.,life
+127N004V01,Sahara Sanjeevani,Sahara India Life Insurance Co. Ltd.,life
+127N005V01,Sahara Nischint Bhavishya,Sahara India Life Insurance Co. Ltd.,life
+127N006V01,Sahara Jan Kalyan,Sahara India Life Insurance Co. Ltd.,life
+127N008V01,Sahara Samooh Suraksha,Sahara India Life Insurance Co. Ltd.,life
+127N008V02,Sahara Samooh Suraksha,Sahara India Life Insurance Co. Ltd.,life
+127N009V01,Sahara Kavach,Sahara India Life Insurance Co. Ltd.,life
+127N010V01,Sahara Sahayog (Micro Endowment Insurance without profit plan),Sahara India Life Insurance Co. Ltd.,life
+127N013V01,Sahara Samriddhi,Sahara India Life Insurance Co. Ltd.,life
+127N016V01,Sahara Jamakarta Samooh Bima,Sahara India Life Insurance Co. Ltd.,life
+127N016V02,Sahara Jamakarta Samooh Bima,Sahara India Life Insurance Co. Ltd.,life
+127N019V01,Sahara Umang,Sahara India Life Insurance Co. Ltd.,life
+127N025V01,Sahara Vatsalya Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N026V01,Sahara Nivesh - Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N027V01,Sahara Dhanavrishti -Jeevam Bima,Sahara India Life Insurance Co. Ltd.,life
+127N028V01,Sahara Subh Nivesh Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N029V01,Sahara Dhan Sachay Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N030V01,Sahara Dhanvarsha Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N031V01,Sahara Secure Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N032V01,Sahara Surakshit Pariwar Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N033V01,Sahara Shrestha Nivesh Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N034V01,Sahara Dhanavriddhi Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+127N035V01,Sahara Pay back - Jeevan Bima,Sahara India Life Insurance Co. Ltd.,life
+133N030V06,Generali Central Care Plus Term Plan,Generali Central Life Insurance Company Limited,life
+133N087V01,Generali Central Saral Jeevan Bima,Generali Central Life Insurance Company Limited,life
+133N105V01,Generali Central Saral Ashray Yojana,Generali Central Life Insurance Company Limited,health
+135N079V01,Ageas Federal Life Insurance Saral Jeevan Bima,Ageas Federal Life Insurance Co Ltd,life
+135N088V02,Ageas Federal Life Insurance iSecure Plan,Ageas Federal Life Insurance Co Ltd,life
+138B006V05,Bandhan Life AD Rider,Bandhan Life Insurance Limited,health
+138N077V01,Bandhan Life Saral Jeevan Bima,Bandhan Life Insurance Limited,life
+138N082V01,Bandhan Life iTerm Comfort,Bandhan Life Insurance Limited,life
+138N084V03,Bandhan Life iTerm Prime,Bandhan Life Insurance Limited,life
+138N086V01,Bandhan Life Akhil Bharat Term Plan,Bandhan Life Insurance Limited,life
+138N095V01,Bandhan Life iTerm Elite,Bandhan Life Insurance Limited,life
+147L034V04,Edelweiss Life Easy Pension,Edelweiss Life Insurance Company Limited,life
+147L037V04,Edelweiss Life Wealth Ultima,Edelweiss Life Insurance Company Limited,life
+147L055V04,Edelweiss Life Wealth Plus,Edelweiss Life Insurance Company Limited,life
+147L066V03,Edelweiss Life Wealth Premier,Edelweiss Life Insurance Company Limited,life
+147L076V02,Edelweiss Life Wealth Rise+,Edelweiss Life Insurance Company Limited,life
+147N075V04,Edelweiss Life Flexi-Savings Plan,Edelweiss Life Insurance Company Limited,life
+147N090V02,Edelweiss Life Legacy Plus,Edelweiss Life Insurance Company Limited,life
+147N114V01,Edelweiss Life Flexi Dream Plan,Edelweiss Life Insurance Company Limited,life
+147N117V01,Edelweiss Life Flexi Goal Secure,Edelweiss Life Insurance Company Limited,life
+512A211V01,LIC's Linked Accidental Death Benefit Rider,Life Insurance Corporation of India,health
+512A211V02,LIC's Linked Accidental Death Benefit Rider,Life Insurance Corporation of India,health
+512A212V01,LIC's New Critical Illness Benefit Rider,Life Insurance Corporation of India,health
+512A212V02,LIC’s New Critical Illness Benefit Rider,Life Insurance Corporation of India,health
+512B001V01,LIC's Accident Benefit Rider,Life Insurance Corporation of India,health
+512B203V02,LIC's Accident Benefit Rider,Life Insurance Corporation of India,health
+512B203V03,LIC's Accident Benefit Rider,Life Insurance Corporation of India,health
+512B204V01,LIC's Premium Waiver Benefit Rider,Life Insurance Corporation of India,life
+512B204V02,LIC's Premium Waiver Benefit Rider,Life Insurance Corporation of India,life
+512B204V03,LIC's Premium Waiver Benefit Rider,Life Insurance Corporation of India,life
+512B204V04,LIC's Premium Waiver Benefit Rider,Life Insurance Corporation of India,life
+512B205V01,LIC's Premium Waiver Benefit Rider (With Auto Cover),Life Insurance Corporation of India,life
+512B209V01,LIC's Accidental Death and Disability Benefit Rider,Life Insurance Corporation of India,health
+512B209V02,LIC's Accidental Death & Disability Benefit Rider,Life Insurance Corporation of India,health
+512B210V01,LIC's NEW TERM ASSURANCE RIDER,Life Insurance Corporation of India,life
+512B210V02,LIC's New Term Assurance Rider,Life Insurance Corporation of India,life
+512B227V01,LIC’s Critical Illness Health Rider,Life Insurance Corporation of India,health
+512L246V01,LIC's Health Plus,Life Insurance Corporation of India,life
+512L253V01,LIC's Health Protection Plus,Life Insurance Corporation of India,life
+512N083V01,LIC's New Janaraksha Plan,Life Insurance Corporation of India,life
+512N205V01,LIC's New Jeevan Suraksha_I,Life Insurance Corporation of India,life
+512N266V01,LIC's Jeevan Arogya,Life Insurance Corporation of India,life
+512N266V02,LIC' Jeevan AROGYA,Life Insurance Corporation of India,life
+512N266V03,LIC' Jeevan AROGYA,Life Insurance Corporation of India,life
+512N288V01,LIC's e-Term,Life Insurance Corporation of India,life
+512N289V01,LIC's Jeevan Rakshak,Life Insurance Corporation of India,life
+512N314V01,LIC's Cancer Cover,Life Insurance Corporation of India,health
+512N314V02,LIC's Cancer Cover,Life Insurance Corporation of India,health
+512N314V03,LIC's Cancer Cover,Life Insurance Corporation of India,health
+512N318V01,LIC's Arogya Rakshak,Life Insurance Corporation of India,life
+512N329V01,LIC’s Micro Bachat Plan,Life Insurance Corporation of India,life
+512N329V02,LIC’s Micro Bachat Plan,Life Insurance Corporation of India,life
+512N329V03,LIC's Micro Bachat,Life Insurance Corporation of India,life
+512N333V01,LIC's TECH TERM,Life Insurance Corporation of India,life
+512N349V01,LIC's Dhan Varsha,Life Insurance Corporation of India,life
+512N351V01,LIC's New TECH TERM,Life Insurance Corporation of India,life
+512N351V02,LIC's New Tech-Term,Life Insurance Corporation of India,life
+512N355V01,LIC’s Yuva Term,Life Insurance Corporation of India,life
+512N355V02,LIC’s Yuva Term,Life Insurance Corporation of India,life
+512N356V01,LIC’s Digi Term,Life Insurance Corporation of India,life
+512N356V02,LIC’s Digi Term,Life Insurance Corporation of India,life
+512N357V01,LIC’s Yuva Credit Life,Life Insurance Corporation of India,life
+512N358V01,LIC’s Digi Credit Life,Life Insurance Corporation of India,life
+512N360V01,LIC’s Bima Kavach,Life Insurance Corporation of India,life
+512N368V01,LIC’s Jeevan Raksha,Life Insurance Corporation of India,life
+512N369V01,LIC's Health Shield,Life Insurance Corporation of India,life
+512N370V01,LIC's New Cancer Cover,Life Insurance Corporation of India,health
+512N388V01,LIC's Jan Suraksha,Life Insurance Corporation of India,life
+ACKHLIP20039V012021,Super Top-up Health Insurance,Acko General Insurance Limited,health
+APOPAIP19004V011920,Add On) HDFHLIA22188V012122 IPA Rider,HDFC ERGO General Insurance Company Ltd.,health
+BAJHLAP21577V012021,‘Waiver of Room Capping” for Health Guard,Bajaj General Insurance Limited,health
+BAJHLAP21586V012021,Non-Medical Expenses Cover- Rider for Health Indemnity Products,Bajaj General Insurance Limited,health
+BAJHLGA22166V012122,Health Prime ( Group),Bajaj General Insurance Limited,health
+BAJHLGA23142V012223,Respect (Group),Bajaj General Insurance Limited,health
+BAJHLGA25036V012425,Road Ambulance - Add On,Bajaj General Insurance Limited,health
+BAJHLGA26066V012526,Tailored Personal Accident,Bajaj General Insurance Limited,health
+BAJHLGA26071V012526,Fetal Flourish (Group),Bajaj General Insurance Limited,health
+BAJHLGP17002V011617,product/Corona-Protection-Policy-P… (AB-NHPM) – In the State of Mizoram Health Insurance Mukhyamantri Swasthya Bima Yojana- In the state of Uttarakhand,Bajaj General Insurance Limited,health
+BAJHLGP18016V011718,Bajaj General Credit Linked Group Hospital Cash Policy,Bajaj General Insurance Limited,health
+BAJHLGP18021V011718,product/Corona-Protection-Policy-P… Health Insurance Rashtriya Swasthya Bima Yojana (RSBY) and Senior Citizens Health Insurance Scheme (SCHIS) in Gujrat,Bajaj General Insurance Limited,health
+BAJHLGP18031V011819,product/Corona-Protection-Policy-P… Health Insurance M-Care (Group),Bajaj General Insurance Limited,health
+BAJHLGP19078V011819,product/Corona-Protection-Policy-P… Health Insurance Ayushman Bharat - National Health Protection Mission,Bajaj General Insurance Limited,health
+BAJHLGP20109V011920,Group Guard,Bajaj General Insurance Limited,health
+BAJHLGP20155V011920,Health Insurance Corona care,Bajaj General Insurance Limited,health
+BAJHLGP21052V022021,Credit Linked Health Plan (Group),Bajaj General Insurance Limited,health
+BAJHLGP21133V012021,product/Micro-Care-Accident-and-Ho… Health Insurance Corona Protection Policy (Group),Bajaj General Insurance Limited,health
+BAJHLGP21181V022021,Health Guard (Group),Bajaj General Insurance Limited,health
+BAJHLGP21602V012021,"Arogya Sanjeevani Policy, Bajaj Allianz General Insurance Company Limited (Group)",Bajaj General Insurance Limited,health
+BAJHLGP22020V022122,M Care (Group),Bajaj General Insurance Limited,health
+BAJHLGP22130V022122,Group Hospital Cash Policy,Bajaj General Insurance Limited,health
+BAJHLGP22165V012122,Flexi Health Protect Plan (Group),Bajaj General Insurance Limited,health
+BAJHLGP25018V012425,Flexi Guard (Group),Bajaj General Insurance Limited,health
+BAJHLGP26067V022526,Flexi Health Protect Plan (Group),Bajaj General Insurance Limited,health
+BAJHLGP26069V012526,Flexi Secure Shield (Combi Product),Bajaj General Insurance Limited,health
+BAJHLGP27078V032627,Group Guard,Bajaj General Insurance Limited,health
+BAJHLGP27083V022627,Global Personal Guard Policy (Group),Bajaj General Insurance Limited,health
+BAJHLIA23141V012223,Respect Rider,Bajaj General Insurance Limited,health
+BAJHLIA24087VO22324,Health Prime (Retail) (Rider for Health Products),Bajaj General Insurance Limited,health
+BAJHLIA24171V012324,Health Care Add-On,Bajaj General Insurance Limited,health
+BAJHLIA25039V012425,Select Net Care Rider,Bajaj General Insurance Limited,health
+BAJHLIA26070V012526,Fetal Flourish (Individual),Bajaj General Insurance Limited,health
+BAJHLIA26072V012526,Insta Shield Rider,Bajaj General Insurance Limited,health
+BAJHLIA26076V012526,NRInsure,Bajaj General Insurance Limited,health
+BAJHLIA27077V012627,Smart Riders,Bajaj General Insurance Limited,health
+BAJHLIP08002V010708,(Wrong UIN Alloted) Health Insurance Jammu and Kashmir Bank Health Insurance policy,Bajaj General Insurance Limited,health
+BAJHLIP09003V010809,Health Insurance J&K Bank Health Insurance Policy,Bajaj General Insurance Limited,health
+BAJHLIP09004V010809,Health Insurance SIB Health Assist,Bajaj General Insurance Limited,health
+BAJHLIP09005V010809,Health Insurance United Sampoorna Suraksha Policy,Bajaj General Insurance Limited,health
+BAJHLIP15001V011415,Health Insurance Surgical Protection Policy,Bajaj General Insurance Limited,health
+BAJHLIP15002V011415,Comprehensive Care Plan,Bajaj General Insurance Limited,health
+BAJHLIP19087V011819,Health Insurance Bajaj General Total Health Secure Goal,Bajaj General Insurance Limited,health
+BAJHLIP19114V011819,Health Insurance Bajaj General Health and Income Protect Goal,Bajaj General Insurance Limited,health
+BAJHLIP21005V022021,Health Infinity,Bajaj General Insurance Limited,health
+BAJHLIP21100V012021,"product/Corona-Protection-Policy-P… Health Insurance Corona Kavach Policy , Bajaj General Insurance Limited",Bajaj General Insurance Limited,health
+BAJHLIP21142V022021,Women Specific Critical Illness,Bajaj General Insurance Limited,health
+BAJHLIP21184V022021,product/Corona-Protection-Policy-P… Health Insurance Tax Gain,Bajaj General Insurance Limited,health
+BAJHLIP21218V022021,Personal Accident,Bajaj General Insurance Limited,health
+BAJHLIP21273V012021,CRITI-CARE,Bajaj General Insurance Limited,health
+BAJHLIP21536V022021,Mediclaim Insurance,Bajaj General Insurance Limited,health
+BAJHLIP21606V022021,"Arogya Sanjeevani Policy, Bajaj General Insurance Limited",Bajaj General Insurance Limited,health
+BAJHLIP22019V022122,M-Care,Bajaj General Insurance Limited,health
+BAJHLIP22024V032122,Family Health care,Bajaj General Insurance Limited,health
+BAJHLIP23068V032223,Health Insurance Extra Care,Bajaj General Insurance Limited,health
+BAJHLIP23069V032223,Extra Care Plus,Bajaj General Insurance Limited,health
+BAJHLIP23078V032223,Hospital Cash Daily Allowance,Bajaj General Insurance Limited,health
+BAJHLIP23143V012223,My Health Care Plan,Bajaj General Insurance Limited,health
+BAJHLIP23184V012223,Nidaan Swasthya Bima Policy,Bajaj General Insurance Limited,health
+BAJHLIP23208V032223,Critical Illness Insurance,Bajaj General Insurance Limited,health
+BAJHLIP23209V022223,Global Health Care,Bajaj General Insurance Limited,health
+BAJHLIP23210V042223,Health Care Supreme,Bajaj General Insurance Limited,health
+BAJHLIP23213V052223,Silver Health,Bajaj General Insurance Limited,health
+BAJHLIP24149V062324,Health Ensure,Bajaj General Insurance Limited,health
+BAJHLIP25035V072425,Health Guard,Bajaj General Insurance Limited,health
+BAJHLIP25037V022425,Star Package,Bajaj General Insurance Limited,health
+BAJHLIP25040V012425,HERizon Care,Bajaj General Insurance Limited,health
+BAJHLIP2540V012425,HERizon Care,Bajaj General Insurance Limited,health
+BAJHLIP26041V012526,Ungalukkaga-Tamil Nadu (including Puducherry),Bajaj General Insurance Limited,health
+BAJHLIP26042V012526,Ningalkkayi- Kerala (Including Lakshadweep),Bajaj General Insurance Limited,health
+BAJHLIP26043V012526,Nimagagi - Karnataka,Bajaj General Insurance Limited,health
+BAJHLIP26044V012526,Mee Kosam- Andhra Pradesh & Telangana,Bajaj General Insurance Limited,health
+BAJHLIP26045V012526,Apananka Pain- Odisha,Bajaj General Insurance Limited,health
+BAJHLIP26046V012526,Apnar Jonyo- West Bengal,Bajaj General Insurance Limited,health
+BAJHLIP26047V012526,AapKe Liye- Madhya Pradesh & Chhattisgarh,Bajaj General Insurance Limited,health
+BAJHLIP26048V012526,AapKe Liye- Bihar & Jharkhand,Bajaj General Insurance Limited,health
+BAJHLIP26049V012526,AapKe Liye- Uttarakhand,Bajaj General Insurance Limited,health
+BAJHLIP26050V012526,AapKe Liye- Uttar Pradesh,Bajaj General Insurance Limited,health
+BAJHLIP26051V012526,Tuhade Lai- Punjab,Bajaj General Insurance Limited,health
+BAJHLIP26052V012526,AapKe Liye- Rajasthan,Bajaj General Insurance Limited,health
+BAJHLIP26053V012526,Tuhund Khatir- Jammu & Kashmir,Bajaj General Insurance Limited,health
+BAJHLIP26054V012526,AapKe Liye- Himachal Pradesh,Bajaj General Insurance Limited,health
+BAJHLIP26055V012526,Tujya Khatir- Goa,Bajaj General Insurance Limited,health
+BAJHLIP26056V012526,Aponar Babe- Assam,Bajaj General Insurance Limited,health
+BAJHLIP26057V012526,AapKe Liye- Arunachal Pradesh,Bajaj General Insurance Limited,health
+BAJHLIP26058V012526,Na Ka bynta jong phi- Meghalaya,Bajaj General Insurance Limited,health
+BAJHLIP26059V012526,Adomgidamak- Manipur,Bajaj General Insurance Limited,health
+BAJHLIP26060V012526,I tan- Mizoram,Bajaj General Insurance Limited,health
+BAJHLIP26062V012526,Opuni Karoni- Nagaland,Bajaj General Insurance Limited,health
+BAJHLIP26063V012526,Tapainko Lagi- Sikkim,Bajaj General Insurance Limited,health
+BAJHLIP26064V012526,AapKe Liye- Andaman & Nicobar Islands,Bajaj General Insurance Limited,health
+BAJHLIP26065V012526,Khyed kyi ched du- Ladakh,Bajaj General Insurance Limited,health
+BAJHLIP26073V082526,Health Guard,Bajaj General Insurance Limited,health
+BAJHLIP26074V022526,My Health Care Plan,Bajaj General Insurance Limited,health
+BAJHLIP27079V012627,My Health Companion,Bajaj General Insurance Limited,health
+BAJHLIP27080V012627,My Swasthya Care,Bajaj General Insurance Limited,health
+BAJHLIP27081V012627,My Family Complete,Bajaj General Insurance Limited,health
+BAJHLIP27082V012627,My Infinite Care,Bajaj General Insurance Limited,health
+BAJHLIP27084V052627,Health Care Supreme,Bajaj General Insurance Limited,health
+BAJPAGP08003V010708,Group Personal Accident,Bajaj General Insurance Limited,health
+BAJPAGP20054V011920,Bajaj General Suraksha Kavach (Group),Bajaj General Insurance Limited,health
+BAJPAGP20060V011920,Union Suraksha Kavach (Group),Bajaj General Insurance Limited,health
+BAJPAGP24054V012324,Antodaya Shramik Suraksha Yojana,Bajaj General Insurance Limited,health
+BAJPAIP07002V010607,Sankat Mochan,Bajaj General Insurance Limited,health
+BAJPAIP08004V010708,Premium Personal Guard,Bajaj General Insurance Limited,health
+BAJPAIP08006V010708,Health Insurance Micro Care Accident and Hospital Cash Policy,Bajaj General Insurance Limited,health
+BAJPAIP14001V021314,Loan Care,Bajaj General Insurance Limited,health
+BAJPAIP15004V011415,product/Micro-Care-Accident-and-Ho… Personal Accident Bajaj General Janata Personal Accident Policy- Individual,Bajaj General Insurance Limited,health
+BAJPAIP15005V011415,Bajaj General Janata Personal Accident Policy- Group,Bajaj General Insurance Limited,health
+BAJPAIP16001V011516,Pradhan Mantri Suraksha Bima Yojana,Bajaj General Insurance Limited,health
+BAJPAIP16002V011516,Global Personal Guard Policy (Individual),Bajaj General Insurance Limited,health
+BAJPAIP17003V011617,Personal Accident Suraksha Chakra,Bajaj General Insurance Limited,health
+BAJPAIP21609V012021,"Saral Suraksha Bima, Bajaj General Insurance Ltd.",Bajaj General Insurance Limited,health
+CHOHLGA22186V012122,ition-absolute > Homecare Treatment Group - Add on Cover,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP20118V011920,ont_28 position-absolute > Chola MS Raksha Kavach Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21004V012021,Chola MS COVID-19 Cover-Group,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21138V012021,Group) Chola,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21289V012021,Chola Criticare,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21307V022021,otate font_28 position-absolute > Group Health Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21310V022021,tate font_28 position-absolute > Baroda Swasthya Parivar,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21311V022021,(name not parsed),Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21312V022021,28 position-absolute > Chola Group Super Topup Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21416V022021,osition-absolute > Chola Income Shield Insurance - Group,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21423V022021,la Group Credit Linked Critical Illness Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21425V022021,Chola Group Credit Linked Cancer Care Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21426V022021,Chola Credit Linked Premium Critical Illness Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21427V022021,lute > Chola Group Hospital Cash Health Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21428V022021,absolute > Chola Group Critical Illness Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21429V022021,Chola Group Cancer Care Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21430V022021,solute > Chola Credit Link Group Hospital Cash Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP21550V012021,Group) Chola,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP22025V012122,Chola Mashak Mosquito Rakshak - Group,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP22160V012122,te font_28 position-absolute > Chola Group Topup Protect,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP22183V012122,tate font_28 position-absolute > Chola Group EMI Protect,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP24033V022324,(name not parsed),Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLGP24168V012324,Chola Credit Link Daily Benefit Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIA22201V012122,ition-absolute > Homecare Treatment Retail- Add on cover,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP20035V021920,Arogya Sanjeevani Policy Chola MS,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21012V012021,Chola MS COVID-19 Cover,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21017V012122,Flexi Max Protect,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21046V012021,(name not parsed),Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21065V012021,Corona Kavach Policy Chola,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21068V012021,Corona Rakshak Policy Chola,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21297V022021,Chola Arogya Bima Health Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21298V022021,Chola Classic Health – Family Floater,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21299V032021,Chola Classic Health – Individual,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21301V022021,ition-absolute > Chola Hospital Cash Healthline Revision,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21302V022021,sition-absolute > Chola MS Critical Healthline Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21303V022021,Chola MS Family Healthline Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21304V022021,Chola Swasth Parivar Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21305V022021,Chola Tax plus Healthline,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21306V022021,Chola Top up Healthline,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21308V022021,Individual Healthline Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21309V022021,font_28 position-absolute > Chola Super Topup Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP21571V012021,te font_28 position-absolute > Chola Sarva Shakti Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP23049V022223,28 position-absolute > Chola Flexi Super TopUp Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP23216V012223,rotate font_28 position-absolute > Divyang Bima Chola MS,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP24093V012324,Chola Surrogate and Oocyte donor,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP24145V062526,wnload Flexi Health,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP24153V062526,ad Chola Healthline,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP27040V032627,Chola Flexi Health Supreme,Cholamandalam MS General Insurance Company Ltd.,health
+CHOHLIP27041V012627,Family Arogya Raksha,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP20102V011920,Chola Credit Linked Group Personal Accident Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP20117V011920,la Health and Accident Plan for Educational Institutions,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP20157V011920,sition-absolute > Chola MS Event Shield Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP21356V012021,ion-absolute > Janata Personal Accident Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP21420V022021,tion-absolute > Group Personal Accident Insurance Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP21421V022021,For Group,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP21424V022021,ute > Chola Comprehensive Group Personal Accident Policy,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAGP22042V012122,t_28 position-absolute > Saral Suraksha Bima Group Chola,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAIP21418V022021,te font_28 position-absolute > Chola Accident Protection,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAIP21419V022021,sition-absolute > Individual Personal Accident Insurance,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAIP21422V022021,MICRO INSURANCE PERSONAL ACCIDENT,Cholamandalam MS General Insurance Company Ltd.,health
+CHOPAIP21612V012021,te font_28 position-absolute > Saral Suraksha Bima Chola,Cholamandalam MS General Insurance Company Ltd.,health
+CTTHLGP18023V021718,ProHealth Group Insurance Policy i. Base Cover ii. Optional Cover,ManipalCigna Health Insurance Company Limited,health
+CTTHLGP18101V021718,Cigna TTK Lifestyle Protection Group Policy,ManipalCigna Health Insurance Company Limited,health
+CTTHLGP20018V021920,CignaTTK Global Health Group Policy i. Base Cover ii. Optional Cover,ManipalCigna Health Insurance Company Limited,health
+CTTHLIP18045V031819,CignaTTK ProHealth Insurance,ManipalCigna Health Insurance Company Limited,health
+GCIHLGP21154V022021,Advantage Top - up - Group,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP21164V022021,Group Health Insurance (Small and Mid-Size groups,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP21165V022021,Group Health Insurance (Revised,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP21490V012021,Group Arogya Sanjeevani Policy,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP21545V022021,Group Personal Accident (Revised,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP22108V022122,Alpa Bima – Group,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP22109V032122,Health Protect – Group,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP22111V032122,Group Loan Bima,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP24118V012324,Disability Income Protection,Future Generali India Insurance Co. Ltd.,health
+GCIHLGP26042V052526,Poorna Suraksha – Group,Future Generali India Insurance Co. Ltd.,health
+GCIHLIA25036V012425,Secure Premium,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP20160V011920,Arogya Sanjeevani Policy,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP21075V012021,Corona Rakshak Policy,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP21076V012021,Corona Kavach Policy,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP22104V022122,Criticare,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP22105V022122,Hospicash,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP22112V032122,Surakshit Loan Bima,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP22234V012122,Health Elite,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP23052V032223,Aarogya Bima,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP23053V032223,Advantage Top - up,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP23198V012223,HIV & Disability Suraksha,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP24025V012324,D.I.Y HEALTH,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP24147V012324,Surrogacy Health Cover,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP24180V012324,Health PowHER,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP25017V052425,Health Suraksha,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP25037V062425,Health Total,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP25038V022425,Health Vital,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP26041V012526,Pradhan Mantri Suraksha Bima Yojna IRDAI/HLT/GCI/GOVT. SCHEME-PMSBY/15/2015-16 43 Health Unlimited,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP26043V032526,Health Absolute,Future Generali India Insurance Co. Ltd.,health
+GCIHLIP26044V012526,Health Xtra,Future Generali India Insurance Co. Ltd.,health
+GCIHMGP22107V032122,Sukshma Hospi-Cash Group (Micro-Insurance Product,Future Generali India Insurance Co. Ltd.,health
+GCIHMIP22106V032122,Sukshma Hospi-Cash (Micro-Insurance Product,Future Generali India Insurance Co. Ltd.,health
+GCIPAGP18010V011718,Janata Personal Accident - Group,Future Generali India Insurance Co. Ltd.,health
+GCIPAIP18040V021718,Accident Suraksha,Future Generali India Insurance Co. Ltd.,health
+GCIPAIP21623V012021,Saral Suraksha Bima,Future Generali India Insurance Co. Ltd.,health
+GHIHLGP25036V012425,Galaxy Plus,Galaxy Health Insurance Company Limited,health
+GHIHLGP27050V012627,Galaxy Super Plus,Galaxy Health Insurance Company Limited,health
+GHIHLIA25038V012425,Galaxy Smart Outpatient - Rider,Galaxy Health Insurance Company Limited,health
+GHIHLIA26043V012526,Unlimited Automatic Restoration-Rider,Galaxy Health Insurance Company Limited,health
+GHIHLIA26046V012526,Consumables – Rider,Galaxy Health Insurance Company Limited,health
+GHIHLIA26047V012526,(name not parsed),Galaxy Health Insurance Company Limited,health
+GHIHLIP25035V012425,Galaxy Promise,Galaxy Health Insurance Company Limited,health
+GHIHLIP25037V012425,Galaxy Guardian,Galaxy Health Insurance Company Limited,health
+GHIHLIP25039V012425,Galaxy Top-up,Galaxy Health Insurance Company Limited,health
+GHIHLIP25040V012425,Galaxy Empower Galaxy Health,Galaxy Health Insurance Company Limited,health
+GHIHLIP26042V012526,Galaxy Marvel,Galaxy Health Insurance Company Limited,health
+GHIHLIP26044V012526,Galaxy Privilege,Galaxy Health Insurance Company Limited,health
+GHIHLIP26045V012526,Arogya Sanjeevani Policy Galaxy Health,Galaxy Health Insurance Company Limited,health
+GHIHLIP26048V012526,Galaxy Twin 360,Galaxy Health Insurance Company Limited,health
+GHIPAIP25041V012425,Galaxy Personal Accident Shield,Galaxy Health Insurance Company Limited,health
+GODHLGA23035V012223,Wellness Benefit Program – Add on Cover under Digit Group Health Insurance Products,Go Digit General Insurance Limited,health
+GODHLGA25036V012425,No Claim Discount ( Cover under Group Health Insurance Products offered by Go Digit General Insurance Ltd),Go Digit General Insurance Limited,health
+GODHLGP21147V012021,Digit Group Hospital Cash Policy,Go Digit General Insurance Limited,health
+GODHLGP21487V032021,Digit Health Plus Policy (Revision),Go Digit General Insurance Limited,health
+GODHLGP21488V022021,Digit Illness Group Insurance,Go Digit General Insurance Limited,health
+GODHLGP21492V022021,Digit Complete Care Policy,Go Digit General Insurance Limited,health
+GODHLGP24055V012324,Digit Supreme Care Policy,Go Digit General Insurance Limited,health
+GODHLGP24103V012324,Digit Group-Out Patient Care Insurance Policy,Go Digit General Insurance Limited,health
+GODHLGP24114V012324,Digit Life Healthy Long Term Group Policy,Go Digit General Insurance Limited,health
+GODHLGP26042V022526,Digit Group Complete Secure Policy,Go Digit General Insurance Limited,health
+GODHLGP26043V022526,Digit Comprehensive Group Protect Policy,Go Digit General Insurance Limited,health
+GODHLGP26045V012526,Digit Aabhar Group Insurance Policy,Go Digit General Insurance Limited,health
+GODHLGP26047V012526,Digit Ultimate Group Protect Policy,Go Digit General Insurance Limited,health
+GODHLIA23034V012223,Wellness Benefit Program – Add on Cover under Digit Individual Health Insurance Products,Go Digit General Insurance Limited,health
+GODHLIA26040V022526,No Claim Discount ( Cover under Individual Health Insurance Products offered by Go Digit General Insurance Ltd),Go Digit General Insurance Limited,health
+GODHLIP21074V012021,"Corona Kavach Policy, Go Digit",Go Digit General Insurance Limited,health
+GODHLIP23185V012223,"Disability and HIV/AIDS Insurance Policy, Go Digit",Go Digit General Insurance Limited,health
+GODHLIP24056V012324,Digit Top Up Policy,Go Digit General Insurance Limited,health
+GODHLIP24179V022324,"Arogya Sanjeevani Policy, Go Digit",Go Digit General Insurance Limited,health
+GODHLIP25038V012425,Digit Donor Shield Policy,Go Digit General Insurance Limited,health
+GODHLIP25039V022425,Digit Health Insurance Policy,Go Digit General Insurance Limited,health
+GODHLIP26044V022526,Digit Life Healthy Glow Policy,Go Digit General Insurance Limited,health
+GODHLIP27048V052627,Digit Health Care Plus Policy,Go Digit General Insurance Limited,health
+GODPAGP21491V022021,Digit Group Total Protect Policy,Go Digit General Insurance Limited,health
+GODPAGP22191V012122,Digit Group Complete Protect Policy,Go Digit General Insurance Limited,health
+GODPAGP23038V012223,Pradhan Mantri Suraksha Bima Yojana (PMSBY),Go Digit General Insurance Limited,health
+GODPAGP26041V022526,Digit Group Janata Personal Accident Policy,Go Digit General Insurance Limited,health
+GODPAIP21489V022021,Digit Total Protect Policy,Go Digit General Insurance Limited,health
+GODPAIP21616V012021,"Saral Suraksha Bima , Go Digit",Go Digit General Insurance Limited,health
+HDFHLIA21271V022021,Add-on,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIA22141V032122,my Optima Secure - HDFHLIP25041V062425 my health Critical Illness,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIA22188V012122,Add On,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIP21131V012021,my health Koti Suraksha,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIP21464V022021,Critical Illness Insurance,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIP22021V042122,my health Medisure Super Top Up Insurance,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIP25012V082425,Optima Restore,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIP25041V062425,my Optima Secure,HDFC ERGO General Insurance Company Ltd.,health
+HDFHLIP26058V082526,my Optima Secure,HDFC ERGO General Insurance Company Ltd.,health
+HIHILIP25035V012425,e to Protect Galaxy Promise,Galaxy Health Insurance Company Limited,health
+HOHLTGP21033V012021,bsolute > Chola Vector Borne Disease Insurance - Group,Cholamandalam MS General Insurance Company Ltd.,health
+IFFHCSP18107V011718,CSC- Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHCSP18108V011718,CSC- Family Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHGSP21194V012021,AYUSHMAN BHARAT – SARBAT SEHAT BIMA YOJANA (AB-SSBY,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGA22170V012122,Wellness Benefit Add-on (Group,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGA24021V012324,Group OPD,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGA24022V012324,Group Global Medishield,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGA24023V012324,Group Global OPD,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGP09003V010809,Jan Swasthya Beema Yojana,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGP19001V011819,Swasthya Sathi scheme,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGP19096V011819,IFFCO-Tokio Group Critical Illness Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGP20034V011920,IFFCO -Tokio Loan Protector Policy (Group,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGP21045V012021,IFFCO-Tokio Group Hospital Daily Cash Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLGP21327V022021,Group Medishield Insurance Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA22178V012122,Wellness Benefit,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA23152V012223,Consumables Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA25036V012425,OPD Cover for Essential Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA25037V012425,Dental Cover for Essential Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA25038V012425,Maternity Cover for Essential Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA27048V012627,Consumables Protector Enhancer for Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIA27049V012627,Consumables Protector Enhancer for Family Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP19036V011920,IFFCO-Tokio Critical Illness Benefit Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP20071V011920,IFFCO-Tokio Mos-Bite Protector Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP20161V011920,"Arogya Sanjeevani Policy, IFFCO-Tokio",IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21081V012021,"Corona Kavach Policy, IFFCO Tokio",IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21082V012021,"Corona Rakshak Policy, IFFCO Tokio",IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21325V032021,Swasthya Kavach (Family health) Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21326V022021,Swasthya Raksha Bima,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21328V022021,Health Protector Plus,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21329V032021,Individual Medishield Insurance Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21353V022021,Critical Illness insurance Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21354V032021,Comprehensive Accident Hospitalization Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP21583V012021,IFFCO-Tokio Hospital Daily Cash Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP23145V012223,Health Protector Max,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP24131V012324,Health Protector Assure,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP25039V012425,Surrogacy Protector Policy,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP25040V022425,Essential Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP27046V072627,Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHLIP27047V072627,Family Health Protector,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHMGP23042V012223,IFFCO-Tokio Group Critical Illness Benefit Policy (Micro Insurance,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHMGP23044V012223,IFFCO-Tokio Group Hospital Daily Cash Policy (Micro Insurance,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHMIP23041V012223,IFFCO-Tokio Critical Illness Benefit Policy (Micro Insurance,IFFCO-TOKIO General Insurance Company Limited,health
+IFFHMIP23043V012223,IFFCO-Tokio Hospital Daily Cash Policy (Micro Insurance,IFFCO-TOKIO General Insurance Company Limited,health
+IFFPAGP23058V012223,Pradhan Mantri Suraksha Bima Yojana (PMSBY,IFFCO-TOKIO General Insurance Company Limited,health
+IFFPAIP21633V012021,"Saral Suraksha Bima, IFFCO-Tokio",IFFCO-TOKIO General Insurance Company Limited,health
+IFFPCSP18099V011718,CSC- Janata Personal Accident,IFFCO-TOKIO General Insurance Company Limited,health
+IFFPMIP23039V012223,Individual Personal Accident Insurance (Micro Insurance,IFFCO-TOKIO General Insurance Company Limited,health
+IFFPMIP23040V012223,Arogya Sanjeevani Policy (Micro Insurance) Iffco-Tokio GIC Ltd,IFFCO-TOKIO General Insurance Company Limited,health
+INIHLIP26040V042526,IndusInd HealthGain Policy,IndusInd General Insurance Company Limited,health
+MAGHLGP21234V022021,Group Health Insurance,Magma General Insurance Limited,health
+MAGHLGP25037V042425,Loan Guard,Magma General Insurance Limited,health
+MAGHLIP20172V011920,"Arogya Sanjeevani Policy, Magma GIL",Magma General Insurance Limited,health
+MAGHLIP21103V012021,"Corona Kavach Policy, Magma GIL",Magma General Insurance Limited,health
+MAGHLIP23047V012223,OneHealth - Extra Cover,Magma General Insurance Limited,health
+MAGHLIP23048V012223,OneHealth Senior,Magma General Insurance Limited,health
+MAGHLIP23189V012223,Saksham Health Insurance,Magma General Insurance Limited,health
+MAGHLIP27039V072627,OneHealth,Magma General Insurance Limited,health
+MAGHLIP27040V012627,OneHealth 10.0,Magma General Insurance Limited,health
+MAGHLIP27041V012627,OneClick OPD,Magma General Insurance Limited,health
+MAGPAGP19026V011819,Group Accident Suraksha,Magma General Insurance Limited,health
+MAGPAGP21565V012021,Janata Personal Accident,Magma General Insurance Limited,health
+MAGPAIP14001V011314,Individual Personal Accident Policy,Magma General Insurance Limited,health
+MAGPAIP21642V012021,"Saral Suraksha Bima, Magma GIL",Magma General Insurance Limited,health
+MAGPAIP25036V012425,OneProtect,Magma General Insurance Limited,health
+MCIHLIA23023V012223,Health 360,ManipalCigna Health Insurance Company Limited,health
+MCIHLIA24148V012324,Lifetime Plus,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP20081V011920,ManipalCigna Super Top Up,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP21121V022021,ManipalCigna Super Top Up,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP21129V022021,ManipalCigna ProHealth Select,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP21512V032021,ManipalCigna ProHealth Cash,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP21546V052021,ManipalCigna ProHealth Insurance,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP21559V012021,Lifetime Health i. India Plan ii. Global Plan,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP22211V062122,ManipalCigna ProHealth Insurance,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP22224V012122,ManipalCigna ProHealth Prime i. Active Plan ii. Protect & Advantage Plan,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP23151V012223,ManipalCigna Prime Senior,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP24011V072324,ManipalCigna ProHealth Insurance,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP24016V032324,ManipalCigna ProHealth Select,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP25024V082425,ManipalCigna ProHealth Insurance i. Prospectus ii. Rate Chart,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP25025V042425,ManipalCigna ProHealth Select,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP25035V012425,ManipalCigna Sarvah i. Uttam ii. Param ii. Pratham,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP26036V022526,ManipalCigna ProHealth Prime i. Active Plan ii. Protect & Advantage Plan,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP26037V052526,ManipalCigna ProHealth Select,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP26038V022526,ManipalCigna Sarvah i. Uttam ii. Param ii. Pratham,ManipalCigna Health Insurance Company Limited,health
+MCIHLIP415V042021,ManipalCigna ProHealth Insurance,ManipalCigna Health Insurance Company Limited,health
+NBHHLIP27059V022627,ReAssure 3.0,Niva Bupa Health Insurance Company Limited,health
+NHIHLIP27047V022627,Arya Health Insurance,Narayana Health Insurance Limited,health
+NHIHLIP27049V072627,Aditi,Narayana Health Insurance Limited,health
+NIAHLGP24181V022324,l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA24017V012324,e the add on cover documents attached. l br g l strong g,The New India Assurance Company Ltd.,health
+NIAHLIA25063V012425,Number,The New India Assurance Company Ltd.,health
+NIAHLIA25064V012425,Number,The New India Assurance Company Ltd.,health
+NIAHLIA25065V022425,Number l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA25066V012425,l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA25067V012425,l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA25068V012425,number,The New India Assurance Company Ltd.,health
+NIAHLIA27001V012627,l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA27002V012627,l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA27003V012627,Number l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA27004V012627,Number l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIA27005V012627,l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIP24123V032324,and Spouse l /td g l td g 100% of Sum Insured l /td g l /tr g l /tbody g l /table g l /div g l p g *Please refer to the,The New India Assurance Company Ltd.,health
+NIAHLIP25035V022425,number l strong g,The New India Assurance Company Ltd.,health
+NIAHLIP25036V022425,l /strong g l /span g l strong g,The New India Assurance Company Ltd.,health
+NIAHLIP25037V022425,Number,The New India Assurance Company Ltd.,health
+NIAHLIP25038V022425,Number,The New India Assurance Company Ltd.,health
+NIAHLIP25039V082425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25039V102425,Number l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIP25040V082425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25040V102425,Number l /strong g,The New India Assurance Company Ltd.,health
+NIAHLIP25041V032425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25044V022425,Number,The New India Assurance Company Ltd.,health
+NIAHLIP25045V032425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25046V042425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25047V042425,Number,The New India Assurance Company Ltd.,health
+NIAHLIP25048V042425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25049V032425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25050V032425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25051V032425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25052V032425,number,The New India Assurance Company Ltd.,health
+NIAHLIP25059V032425,ife Long Renewals l p g 80D Tax Benefit l p g l strong g,The New India Assurance Company Ltd.,health
+NIAHLIP25060V032425,evised premium is applicable from 01.04.2025 under l b g,The New India Assurance Company Ltd.,health
+NIAHLIP25061V012425,number,The New India Assurance Company Ltd.,health
+RELHLGP08003V010708,IndusInd Critical Illness Policy,IndusInd General Insurance Company Limited,health
+RELHLIA25036V012425,IndusInd Health Surrogate and Oocyte Donor Rider,IndusInd General Insurance Company Limited,health
+RELHLIP20027V012021,IndusInd Hospi Care Policy,IndusInd General Insurance Company Limited,health
+RELHLIP21001V012021,"Arogya Sanjeevani Policy, IndusInd General",IndusInd General Insurance Company Limited,health
+RELHLIP21092V012021,IndusInd Corona Kavach Policy,IndusInd General Insurance Company Limited,health
+RELHLIP21093V012021,IndusInd Corona Rakshak Policy,IndusInd General Insurance Company Limited,health
+RELHLIP21617V012021,IndusInd Health Super Top Up Policy,IndusInd General Insurance Company Limited,health
+RELHLIP22185V042122,IndusInd Healthwise Policy,IndusInd General Insurance Company Limited,health
+RELHLIP23120V042223,IndusInd Health Infinity Policy,IndusInd General Insurance Company Limited,health
+RELHLIP23197V012223,IndusInd Specially Abled Health Policy,IndusInd General Insurance Company Limited,health
+RELPAIP21641V012021,IndusInd Saral Suraksha Bima Policy,IndusInd General Insurance Company Limited,health
+RELPAIP25035V022425,IndusInd Personal Accident 360Shield Policy,IndusInd General Insurance Company Limited,health
+SBIHLGP21122V012021,Vector Borne Disease Cover- Group,SBI General Insurance Company Ltd.,health
+SBIHLGP21330V022021,Group Health Insurance Policy,SBI General Insurance Company Ltd.,health
+SBIHLGP21605V012021,Sampoorna Arogya -Group,SBI General Insurance Company Ltd.,health
+SBIHLGP23005V012223,HospiCash Loan Insurance,SBI General Insurance Company Ltd.,health
+SBIHLGP24031V012324,Group Mediclaim Policy,SBI General Insurance Company Ltd.,health
+SBIHLGP25036V012425,SBI General Comprehensive Protection Policy,SBI General Insurance Company Ltd.,health
+SBIHLGP27035V012627,SBI General Arogya Gold- Group,SBI General Insurance Company Ltd.,health
+SBIHLGP27038V022627,"Arogya Sanjeevani Policy, SBI",SBI General Insurance Company Ltd.,health
+SBIHLIP11003V011011,Hospital Daily Cash Insurance Policy,SBI General Insurance Company Ltd.,health
+SBIHLIP11004V011011,Critical Illness Insurance Policy,SBI General Insurance Company Ltd.,health
+SBIHLIP21090V012021,"Corona Kavach Policy, SBI",SBI General Insurance Company Ltd.,health
+SBIHLIP21120V012021,"Corona Rakshak Policy, SBI",SBI General Insurance Company Ltd.,health
+SBIHLIP22135V032122,Arogya Plus Policy,SBI General Insurance Company Ltd.,health
+SBIHLIP22136V032122,Arogya Premier Policy,SBI General Insurance Company Ltd.,health
+SBIHLIP22137V032122,Arogya Top Up Policy,SBI General Insurance Company Ltd.,health
+SBIHLIP22138V042122,Health Insurance Policy - Retail,SBI General Insurance Company Ltd.,health
+SBIHLIP22158V012122,Arogya Shield,SBI General Insurance Company Ltd.,health
+SBIHLIP24141V022324,Super Health Insurance,SBI General Insurance Company Ltd.,health
+SBIHLIP26038V012526,SBI General Health Alpha,SBI General Insurance Company Ltd.,health
+SBIHLIP27036V022627,Arogya Supreme,SBI General Insurance Company Ltd.,health
+SBIHLIP27037V022627,"Arogya Sanjeevani Policy, SBI",SBI General Insurance Company Ltd.,health
+SBIHMGP27040V022627,"Arogya Sanjeevani, SBI General Insurance Co. limited- Group- Micro Insurance",SBI General Insurance Company Ltd.,health
+SBIHMIP27039V022627,"Arogya Sanjeevani, SBI General Insurance Co. limited- Micro Insurance",SBI General Insurance Company Ltd.,health
+SBIPAGP11005V011011,Group Personal Accident,SBI General Insurance Company Ltd.,health
+SBIPAGP20150V011920,Kutumb Swasthya Bima- Group,SBI General Insurance Company Ltd.,health
+SBIPAGP22182V012122,Hospital Daily Cash – Group,SBI General Insurance Company Ltd.,health
+SBIPAGP24073V022324,Group Loan Insurance Policy,SBI General Insurance Company Ltd.,health
+SBIPAIP12002V011112,Individual Personal Accident,SBI General Insurance Company Ltd.,health
+SBIPAIP20169V012021,Kutumb Swasthya Bima,SBI General Insurance Company Ltd.,health
+SBIPAIP21639V012021,"Saral Suraksha Bima, SBI",SBI General Insurance Company Ltd.,health
+TATHLGA24112V012324,iticare 360(TATHLGP24169V012324) TATA AIG Group Flexi Rider,TATA AIG General Insurance Company Limited,health
+TATHLGP14004V011314,style= border-bottom 2px dotted #bcbcbc > Group Mediprime,TATA AIG General Insurance Company Limited,health
+TATHLGP17001V011617,ferrer > Sakhi‐ TATA AIG Maternal Care Group Credit Secure,TATA AIG General Insurance Company Limited,health
+TATHLGP20031V011920,conDown.png alt= iconDown /> Sakhi‐ TATA AIG Maternal Care,TATA AIG General Insurance Company Limited,health
+TATHLGP20116V011920,= col-12 col-md-6 > Health Group Tata AIG Group EMI Protect,TATA AIG General Insurance Company Limited,health
+TATHLGP21004V032122,MediCare 360(TATHLGP22162V012122) Group Credit Secure Plus,TATA AIG General Insurance Company Limited,health
+TATHLGP21043V012021,PAGP21287V022021) Tata AIG COVID Protection Group Insurance,TATA AIG General Insurance Company Limited,health
+TATHLGP21248V022021,d #bcbcbc > Health Group MediCare,TATA AIG General Insurance Company Limited,health
+TATHLGP21291V022021,l Illness(TATHLGP21294V022021) Tata AIG Group Hospital Cash,TATA AIG General Insurance Company Limited,health
+TATHLGP21294V022021,ediCare Additional Wordings Tata AIG Group Critical Illness,TATA AIG General Insurance Company Limited,health
+TATHLGP22162V012122,ion Group Insurance(TATHLGP21043V012021) Group MediCare 360,TATA AIG General Insurance Company Limited,health
+TATHLGP24169V012324,dditional Wordings(TATHLGP21004V032122) Group Criticare 360,TATA AIG General Insurance Company Limited,health
+TATHLIA24177V012324,ATHLIA24178V012324) TATA AIG Consumables Benefit Add On (,TATA AIG General Insurance Company Limited,health
+TATHLIA24178V012324,TATHLIP25001V012425) TATA AIG Co-payment Waiver Add On (,TATA AIG General Insurance Company Limited,health
+TATHLIA25019V012425,IA25020V012425) Waiver of Higher Zone Co-Payment Add On (,TATA AIG General Insurance Company Limited,health
+TATHLIA25020V012425,035V012425) Modification of Mandatory Sub-limits Add On (,TATA AIG General Insurance Company Limited,health
+TATHLIA25035V012425,EmpowerHer (,TATA AIG General Insurance Company Limited,health
+TATHLIA25036V012425,Mental Wellbeing (,TATA AIG General Insurance Company Limited,health
+TATHLIA25037V012425,rer >CanCare (,TATA AIG General Insurance Company Limited,health
+TATHLIA25038V012425,eferrer >Flexi Shield (,TATA AIG General Insurance Company Limited,health
+TATHLIA25039V012425,AIG MediCare Premier (TATHLIP26052V052526) Flexi Shield (,TATA AIG General Insurance Company Limited,health
+TATHLIA26054V012526,lier Rider (TATHLIA26055V012526) External Congenital Rider,TATA AIG General Insurance Company Limited,health
+TATHLIA26055V012526,Care Reserve (TATHLIP27059V012627) Health Multiplier Rider,TATA AIG General Insurance Company Limited,health
+TATHLIP07002V010607,rospectus Group Accident And Sickness Hospital Cash Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP10003V010910,rder-bottom 2px dotted #bcbcbc > Wellsurance Senior Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP12001V011112,pdf target= _blank rel= noreferrer >Tariff Chart Mediprime,TATA AIG General Insurance Company Limited,health
+TATHLIP20169V011920,anjeevani Policy TATA AIG,TATA AIG General Insurance Company Limited,health
+TATHLIP21095V012021,na Kavach Policy Tata AIG,TATA AIG General Insurance Company Limited,health
+TATHLIP21225V022021,rder-bottom 2px dotted #bcbcbc > Tata AIG MediCare Protect,TATA AIG General Insurance Company Limited,health
+TATHLIP21253V022021,ard Plus Policy(TATHLIP21293V022021) Tata AIG MediCare Plus,TATA AIG General Insurance Company Limited,health
+TATHLIP21254V022021,ank rel= noreferrer >Tariff Chart Wellsurance Woman Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP21255V022021,nk rel= noreferrer >Tariff Chart Wellsurance Family Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP21256V022021,r-bottom 2px dotted #bcbcbc > Wellsurance Executive Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP21258V022021,.pdf target= _blank rel= noreferrer >Tariff Chart MediPlus,TATA AIG General Insurance Company Limited,health
+TATHLIP21259V022021,yNone style= border-bottom 2px dotted #bcbcbc > MediRaksha,TATA AIG General Insurance Company Limited,health
+TATHLIP21260V022021,df target= _blank rel= noreferrer >Tariff Chart MediSenior,TATA AIG General Insurance Company Limited,health
+TATHLIP21286V022021,bcbcbc > Individual Accident Sickness Hospital Cash Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP21292V022021,border-bottom 2px dotted #bcbcbc > Critical Illness Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP21293V022021,Criti MediCare(TATHLIP22176V012122) Home Guard Plus Policy,TATA AIG General Insurance Company Limited,health
+TATHLIP22176V012122,AIG Elder Care(TATHLIP23179V012223) Tata AIG Criti MediCare,TATA AIG General Insurance Company Limited,health
+TATHLIP23179V012223,Health Supercharge(TATHLIP24113V012324) Tata AIG Elder Care,TATA AIG General Insurance Company Limited,health
+TATHLIP24113V012324,iCare LITE(TATHLIP24132V012324) Tata AIG Health Supercharge,TATA AIG General Insurance Company Limited,health
+TATHLIP24132V012324,TATA AIG Hope (TATHLIP25001V012425) Tata AIG MediCare LITE,TATA AIG General Insurance Company Limited,health
+TATHLIP25001V012425,A AIG MediCare Premier (TATHLIP26052V052526) TATA AIG Hope,TATA AIG General Insurance Company Limited,health
+TATHLIP26052V052526,G MediCare (TATHLIP26053V042526) TATA AIG MediCare Premier,TATA AIG General Insurance Company Limited,health
+TATHLIP26053V042526,MediCare Reserve ( TATHLIP27059V012627)) TATA AIG MediCare,TATA AIG General Insurance Company Limited,health
+TATHLIP27059V012627,DS Tata AIG(TATHLIP27062V022627) TATA AIG MediCare Reserve,TATA AIG General Insurance Company Limited,health
+TATHLIP27060V012627,re Select (TATHLIP27061V022627) TATA AIG MediCare Platinum,TATA AIG General Insurance Company Limited,health
+TATHLIP27061V022627,ss= col-12 col-md-6 > Health TATA AIG MediCare Select,TATA AIG General Insurance Company Limited,health
+TATHLIP27062V022627,Policy for Persons with Disabilities and HIV/AIDS Tata AIG,TATA AIG General Insurance Company Limited,health
+TATHMGP21015V022122,08MP0001V01202122) Group Credit Secure Plus micro insurance,TATA AIG General Insurance Company Limited,health
+TATHMGP21533V022021,DAN108MP0001V01201920) Group Medicare Micro Insurance Base,TATA AIG General Insurance Company Limited,health
+TATHMGP21535V022021,P21533V022021) Tata AIG Group Hospital Cash Microinsurance,TATA AIG General Insurance Company Limited,health
+TATPAGP21287V022021,LGP21291V022021) Tata AIG Personal Accident and Loss of Job,TATA AIG General Insurance Company Limited,health
+TATPAGP23093V032223,ent Policy(TATPAGP23092V032223) Group Accident Guard Policy,TATA AIG General Insurance Company Limited,health
+TATPAGP23102V022223,ATPAIP23094V032223) Janata Personal Accident Policy (Group,TATA AIG General Insurance Company Limited,health
+TATPAGP24050V012324,AIP26058V012526) Tata AIG Antyodaya Shramik Suraksha Yojana,TATA AIG General Insurance Company Limited,health
+TATPAIP21640V012021,l Suraksha Bima Tata AIG,TATA AIG General Insurance Company Limited,health
+TATPAIP23086V032223,raksha Bima Yojana(TATPGSP23103V022223) Accident Guard Plus,TATA AIG General Insurance Company Limited,health
+TATPAIP23087V032223,nt Shield Policy(TATPAIP23088V032223) Accident Guard Policy,TATA AIG General Insurance Company Limited,health
+TATPAIP23088V032223,ury Plan Policy(TATPAIP23094V032223) Accident Shield Policy,TATA AIG General Insurance Company Limited,health
+TATPAIP23094V032223,TATPAIP23101V022223) Maharaksha Personal Injury Plan Policy,TATA AIG General Insurance Company Limited,health
+TATPAIP23098V032223,e Company Limited.(TATPAIP21640V012021) Secured Future Plan,TATA AIG General Insurance Company Limited,health
+TATPAIP23101V022223,P23103V022223) Janata Personal Accident Policy (Individual,TATA AIG General Insurance Company Limited,health
+TATPAIP26058V012526,t Guard Plus(TATPAIP23086V032223) Accident Super Guard Plus,TATA AIG General Insurance Company Limited,health
+TATPGSP23103V022223,d-6 > Personal Accident Pradhan Mantri Suraksha Bima Yojana,TATA AIG General Insurance Company Limited,health
+TATPMGP23126V022223,09V012122) Janata Personal Accident (Group) Micro Insurance,TATA AIG General Insurance Company Limited,health
+TATPMIP22009V012122,e(TATHMGP21015V022122) Saral Suraksha Bima Micro Insurance,TATA AIG General Insurance Company Limited,health
+TATPMIP23127V022223,223) Janata Personal Accident (Individual) Micro Insurance,TATA AIG General Insurance Company Limited,health

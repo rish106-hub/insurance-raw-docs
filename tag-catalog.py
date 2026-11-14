@@ -47,6 +47,11 @@ def pdf_text(path, pages=3):
     signal.alarm(20)
     try:
         r = PdfReader(path)
+        if r.is_encrypted:
+            try:
+                r.decrypt('')
+            except Exception:
+                pass
         title = ''
         try:
             title = (r.metadata.title or '') if r.metadata else ''
@@ -65,8 +70,11 @@ def pdf_text(path, pages=3):
         signal.alarm(0)
 
 
+UIN_LABELLED = re.compile(r'UIN\s*(?:No\.?|Number)?\s*[:\-–]?\s*([A-Z0-9]{3,6}[A-Z]{0,6}\d{3,5}V\d{2,6})', re.I)
+
+
 def find_uin(s):
-    for rx in (UIN_GENERAL, UIN_LIFE, UIN_GENERAL_LOOSE, UIN_OLD):
+    for rx in (UIN_GENERAL, UIN_LIFE, UIN_LABELLED, UIN_GENERAL_LOOSE, UIN_OLD):
         found = rx.findall(s or '')
         if found:
             return collections.Counter(found).most_common(1)[0][0]
@@ -163,6 +171,9 @@ def main():
             text, title = pdf_text(path)
         if not uin and text:
             uin, uin_src = find_uin(text), 'pdf_text'
+        if not uin and os.path.exists(path):
+            deep, _ = pdf_text(path, pages=60)
+            uin, uin_src = find_uin(deep), 'pdf_text_deep'
         if not name and text:
             name, name_src = name_from_text(text, uin), 'pdf_text'
         if not name and title and not GENERIC_NAMES.match(title) and len(title) < 100 and not re.search(r'microsoft|untitled|\.docx?$', title, re.I):
