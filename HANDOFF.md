@@ -27,10 +27,13 @@ ICICI Pru 2/52; Care 1/61; ABHI 18/21.
 
 ## Decisions from the owner
 
-- **Storage: Cloudflare R2**, not Supabase. Upload `docs/<host>/<sha256>.pdf` to a private R2 bucket keyed by
-  sha256. The owner sees the data as relational: catalog rows go into a database table (one row per PDF,
-  FK to insurer and to product by UIN) and point at the R2 object key. Not built yet; needs the owner's
-  R2 bucket and credentials (never read `.env*`; ask the owner).
+- **Storage: Cloudflare R2 (PDF bytes) + Supabase free Postgres (rows)**. BUILT by Squad A in
+  `insurance-data-api` branch `sqb/supabase-store`: migration 022 (`documents` keyed by sha256, FK to
+  `insurers` and to `insurance_products` via UIN; `document_artifacts` for AI extraction XML/CSV/JSON;
+  RLS on every table) and `npm run docs:load -- --catalog catalog.csv --docs-root docs` (re-hashes each
+  PDF, uploads under readable key `<insurer>/<UIN|unassigned>/<product>__<doc_type>__<sha8>.pdf`,
+  idempotent; re-run after every re-tag to refresh tags). Do not build another uploader. Waiting on the
+  owner's R2 bucket/token and Supabase login (never read `.env*`).
 - **Paused** (do not work on until the owner says): Oriental (site renders blank), Raheja QBE (site down), IRDAI.
 - robots.txt waived. Never solve a CAPTCHA (the owner does). No logins, no personal data.
 - Download everything, parse nothing. Tags are `extracted_unverified`.

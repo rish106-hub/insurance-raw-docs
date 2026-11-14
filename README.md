@@ -17,5 +17,5 @@ collection (`robots_consulted: false`). Challenges are never solved by the tool.
 Rights: store and transform allowed for the prototype; serving or redistributing the documents is not
 (see `docs/source-rights-register.md` in insurance-data-api, FOR LEGAL REVIEW). Keep this repo private.
 
-Next step for a later agent: upload `docs/` to a private Cloudflare R2 bucket keyed by `sha256`, and load
-`catalog.csv` into a relational table pointing at each object. See `HANDOFF.md`.
+Storage: `insurance-data-api` `npm run docs:load` (branch `sqb/supabase-store`) loads `catalog.csv` into the
+relational `documents` table and uploads `docs/` to private Cloudflare R2. See `HANDOFF.md`.
