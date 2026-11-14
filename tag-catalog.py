@@ -19,7 +19,7 @@ import urllib.parse
 
 from pypdf import PdfReader
 
-REPO = sys.argv[1]
+REPO = sys.argv[1] if len(sys.argv) > 1 else ""
 LIFE_INSURERS = re.compile(r'life|sud life|star union dai-ichi', re.I)
 
 UIN_GENERAL = re.compile(r'\b([A-Z]{3,6}(?:HL|PA|TG|TI|TR|MI|GS|HE|LI|IP|MC|PE|FL|MR|OP|CI)[A-Z]{1,3}\d{5}V\d{6})\b')
@@ -28,6 +28,41 @@ UIN_LIFE = re.compile(r'\b(\d{3}[A-Z]\d{3}V\d{2})\b')
 UIN_OLD = re.compile(r'\b(IRDAI?/(?:NL-)?HLT/[A-Z0-9]+/[A-Z\-]+/V\.?[IVX]+/\d+/\d{2,4}-\d{2,4})\b')
 
 GENERIC_NAMES = re.compile(r'^(download ?pdf|download now|download|view|click here|pdf|brochure|prospectus|policy wording[s]?|cis|customer information sheet|in case you are unable.*|.{0,2})$', re.I)
+LABEL_NAME = re.compile(r'(identification number|^uin\b|^(product|plan|policy) (name|no)\b|^name of the (product|plan|policy)\b|^product\s*:?$)', re.I)
+DOC_TYPE_RX = [
+    ('cis', r'\bcis\b|customer.?information'),
+    ('wording', r'wording|policy.?doc|terms.?(and|&).?cond|policy.?contract|specimen|\bpw\b'),
+    ('prospectus', r'prospectus'),
+    ('brochure', r'brochure|leaflet|sales.?lit'),
+    ('proposal_form', r'proposal'),
+    ('claim_form', r'claim'),
+    ('service_form', r'\bkyc\b|nach|mandate|nominat|assignment|revival|surrender|request|service|change.?of|declaration|form'),
+    ('rate_chart', r'rate.?chart|premium.?(rate|chart|table)'),
+    ('benefit_illustration', r'illustration'),
+]
+
+
+def doc_type_of(cur, url, name):
+    if cur and cur not in ('unknown', 'other'):
+        return cur
+    s = (urllib.parse.unquote(url) + ' ' + (name or '')).lower()
+    for t, rx in DOC_TYPE_RX:
+        if re.search(rx, s):
+            return t
+    return cur or 'unknown'
+
+
+def load_registry():
+    p = os.path.join(REPO, 'links', 'registry-uin-names.csv')
+    reg = collections.defaultdict(set)
+    if os.path.exists(p):
+        for r in csv.DictReader(open(p)):
+            u = re.sub(r'\s+', '', r['uin']).upper()
+            if u and r['registry_product_name'].strip():
+                reg[u].add(r['registry_product_name'].strip())
+    return {u: next(iter(n)) for u, n in reg.items() if len(n) == 1}
+
+
 DOC_WORDS = re.compile(r'\b(policy|wordings?|brochure|prospectus|cis|customer information sheet|proposal form|sales|leaflet|web|final|new|revised|updated|v ?\d+(\.\d+)?|uin.*)\b', re.I)
 
 
@@ -74,11 +109,46 @@ UIN_LABELLED = re.compile(r'UIN\s*(?:No\.?|Number)?\s*[:\-–]?\s*([A-Z0-9]{3,6}
 
 
 def find_uin(s):
+    """Simple form for short strings (link text, URL): most common match of the first pattern that hits."""
     for rx in (UIN_GENERAL, UIN_LIFE, UIN_LABELLED, UIN_GENERAL_LOOSE, UIN_OLD):
         found = rx.findall(s or '')
         if found:
             return collections.Counter(found).most_common(1)[0][0]
     return ''
+
+
+def uin_base(u):
+    """Product identity without the filing version: 101N084V29 -> 101N084, HDFHLIP21345V012021 -> HDFHLIP21345."""
+    return re.sub(r'V\d{2}(\d{4})?$', '', u)
+
+
+def pick_uin(text, rider_doc):
+    """UIN for a long PDF text. Returns (uin, ambiguous).
+
+    A long document mentions other UINs (riders it offers, plans it replaces, group variants). Rules:
+    labelled UINs ("UIN: ...") beat bare matches; product UINs beat riders (life 'B', general add-on)
+    unless the document is a rider; if two or more distinct products remain, return no UIN (never guess).
+    Versions of the same product collapse; the most frequent version wins.
+    """
+    s = text or ''
+    found = []
+    for rx in (UIN_GENERAL, UIN_LIFE, UIN_GENERAL_LOOSE, UIN_OLD):
+        found += rx.findall(s)
+    if not found:
+        return '', False
+    labelled = [u.upper() for u in UIN_LABELLED.findall(s)]
+    labelled = [u for u in labelled if u in found]
+    pool = labelled or found
+    if not rider_doc:
+        products = [u for u in pool if not re.match(r'^\d{3}[BC]\d{3}V\d{2}$', u)]
+        pool = products or pool
+    bases = collections.Counter(uin_base(u) for u in pool)
+    if len(bases) > 1:
+        (b1, c1), (_, c2) = bases.most_common(2)
+        if c1 < 3 * c2:          # no clear owner: one product must dominate 3:1 to be taken
+            return '', True
+        pool = [u for u in pool if uin_base(u) == b1]
+    return collections.Counter(pool).most_common(1)[0][0], False
 
 
 def name_from_url(url):
@@ -100,11 +170,11 @@ def name_from_text(text, uin):
                 cand = re.split(r'\(?\s*UIN|\bUIN\b', line, flags=re.I)[0].strip(' :-–,|(')
                 cand = re.sub(r'^(product name|name of the (product|plan|policy))\s*[:\-]\s*', '', cand, flags=re.I)
                 cand = cand.replace(uin, '').strip(' :-–,|(')
-                if 4 <= len(cand) <= 90 and len(re.findall(r'[A-Za-z]{3,}', cand)) >= 2:
+                if 4 <= len(cand) <= 90 and not LABEL_NAME.search(cand) and len(re.findall(r'[A-Za-z]{3,}', cand)) >= 2:
                     return cand
     for line in text.splitlines()[:25]:
         l = line.strip()
-        if 6 <= len(l) <= 80 and re.search(r'(plan|policy|insurance|cover|shield|protect|bima|care|health)', l, re.I) \
+        if 6 <= len(l) <= 80 and not LABEL_NAME.search(l) and re.search(r'(plan|policy|insurance|cover|shield|protect|bima|care|health)', l, re.I) \
                 and not re.search(r'(limited|ltd|registered|irdai reg|cin|www\.|page \d)', l, re.I):
             return l
     return ''
@@ -145,35 +215,80 @@ def category(uin, name, insurer, doc_type):
         return 'life_other'
     if re.search(r'health|medi|hospital|arogya|care|optima|surplus|top.?up|floater|family', n):
         return 'health_individual'
-    if doc_type in ('claim_form', 'proposal_form'):
+    if doc_type in ('claim_form', 'proposal_form', 'service_form'):
         return 'form_general'
     return ''
 
 
+REGISTRY = {}
+
+
+def link_wins(cand, flat, pdf_uin):
+    """A link-page or URL UIN is kept only if the PDF's first pages contain it or show no clear UIN.
+    An old-format IRDA reference in the PDF does not beat a modern UIN on the link page or URL."""
+    return bool(cand) and (cand in flat or not pdf_uin or (bool(UIN_OLD.fullmatch(pdf_uin)) and not UIN_OLD.fullmatch(cand)))
+
+
+def norm(x):
+    return re.sub(r'[^a-z0-9]+', ' ', (x or '').lower()).strip()
+
+
+# Doc-type words: a name made only of these ("policy wording", "brochures", "health") is shared by many products.
+DOC_WORDS = {'policy', 'wording', 'wordings', 'brochure', 'brochures', 'prospectus', 'cis', 'health', 'life',
+             'insurance', 'plan', 'form', 'forms', 'customer', 'information', 'sheet', 'document', 'documents',
+             'sales', 'literature', 'terms', 'conditions', 'and', 'of', 'the', 'pdf', 'download', 'leaflet'}
+
+
+def sibling_index(rows):
+    """insurer -> normalised product name -> UIN, only for names that map to exactly one UIN within the
+    insurer and are not made only of doc-type words."""
+    names = collections.defaultdict(lambda: collections.defaultdict(set))
+    for r in rows:
+        if r['uin'] and r['product_name']:
+            names[r['insurer_legal_name']][norm(r['product_name'])].add(r['uin'])
+    out = collections.defaultdict(dict)
+    for ins, d in names.items():
+        for n, uins in d.items():
+            if len(uins) == 1 and set(n.split()) - DOC_WORDS:
+                out[ins][n] = next(iter(uins))
+    return out
+
+
 def main():
+    global REGISTRY
+    REGISTRY = load_registry()
+    print(f'registry uins={len(REGISTRY)}', file=sys.stderr)
     rows = [json.loads(l) for l in open(os.path.join(REPO, 'manifest.jsonl')) if l.strip()]
     out = []
     for i, m in enumerate(rows):
         path = os.path.join(REPO, 'docs', m['path'])
         url = m.get('source_url', '')
         insurer = m.get('insurer_legal_name', '')
-        uin, uin_src = (m.get('uin') or '').strip(), 'link_page'
-        if uin and not (UIN_GENERAL_LOOSE.fullmatch(uin) or UIN_LIFE.fullmatch(uin) or UIN_OLD.fullmatch(uin)):
-            uin = find_uin(uin)
-        if not uin:
-            uin, uin_src = find_uin(urllib.parse.unquote(url)), 'url'
+        link_uin = (m.get('uin') or '').strip().upper()
+        if link_uin and not (UIN_GENERAL_LOOSE.fullmatch(link_uin) or UIN_LIFE.fullmatch(link_uin) or UIN_OLD.fullmatch(link_uin)):
+            link_uin = find_uin(link_uin)
+        url_uin = find_uin(urllib.parse.unquote(url).upper())
         name = (m.get('product_name') or '').strip()
         name_src = 'link_page'
-        if not name or GENERIC_NAMES.match(name) or len(name) > 100:
+        if not name or GENERIC_NAMES.match(name) or LABEL_NAME.search(name) or len(name) > 100:
             name, name_src = '', ''
-        text, title = ('', '')
-        if (not uin or not name) and os.path.exists(path):
-            text, title = pdf_text(path)
-        if not uin and text:
-            uin, uin_src = find_uin(text), 'pdf_text'
-        if not uin and os.path.exists(path):
+        text, title = pdf_text(path) if os.path.exists(path) else ('', '')
+        rider_doc = bool(re.search(r'rider', url + ' ' + name, re.I))
+        pdf_uin, ambiguous = pick_uin(text, rider_doc)
+        flat = re.sub(r'\s+', '', text).upper()
+        # A link-page or URL UIN is kept only if the PDF's own first pages agree or say nothing clear.
+        # Link pages often show a card's UIN next to another product's PDF; the document itself wins.
+        uin, uin_src = '', ''
+        for cand, src in ((link_uin, 'link_page'), (url_uin, 'url')):
+            if link_wins(cand, flat, pdf_uin):
+                uin, uin_src = cand, src
+                break
+        if not uin and pdf_uin:
+            uin, uin_src = pdf_uin, ('pdf_text_over_link' if (link_uin or url_uin) else 'pdf_text')
+        if not uin and not ambiguous and os.path.exists(path):
             deep, _ = pdf_text(path, pages=60)
-            uin, uin_src = find_uin(deep), 'pdf_text_deep'
+            uin, ambiguous = pick_uin(deep, rider_doc)
+            uin_src = 'pdf_text_deep'
         if not name and text:
             name, name_src = name_from_text(text, uin), 'pdf_text'
         if not name and title and not GENERIC_NAMES.match(title) and len(title) < 100 and not re.search(r'microsoft|untitled|\.docx?$', title, re.I):
@@ -181,33 +296,35 @@ def main():
         if not name:
             name, name_src = name_from_url(url), 'url'
         if not uin:
-            uin_src = ''
-        cat = category(uin, name, insurer, m.get('doc_type', ''))
+            uin_src = 'ambiguous_pdf_text' if ambiguous else ''
+        reg_name = REGISTRY.get(re.sub(r'\s+', '', uin).upper()) if uin else None
+        if reg_name:
+            name, name_src = reg_name, 'registry'
+        dtype = doc_type_of(m.get('doc_type', ''), url, name)
+        cat = category(uin, name, insurer, dtype)
         missing = [k for k, v in (('uin', uin), ('insurer_legal_name', insurer), ('product_name', name), ('category', cat)) if not v]
         out.append({
             'sha256': m['sha256'], 'pdf_path': 'docs/' + m['path'], 'source_url': url,
             'insurer_legal_name': insurer, 'uin': uin, 'product_name': name, 'category': cat,
-            'doc_type': m.get('doc_type', ''), 'uin_source': uin_src, 'name_source': name_src,
+            'doc_type': dtype, 'uin_source': uin_src, 'name_source': name_src,
             'tag_status': 'complete' if not missing else 'missing:' + '|'.join(missing),
             'verification': 'extracted_unverified',
         })
         if i % 200 == 0:
             print(f'{i}/{len(rows)}', file=sys.stderr)
     # Inherit a UIN from a sibling document of the same insurer with the same product name.
-    norm = lambda x: re.sub(r'[^a-z0-9]+', ' ', (x or '').lower()).strip()
-    by_ins = collections.defaultdict(dict)
-    for r in out:
-        if r['uin'] and r['product_name']:
-            by_ins[r['insurer_legal_name']].setdefault(norm(r['product_name']), r['uin'])
+    by_ins = sibling_index(out)
     for r in out:
         if r['uin'] or not r['product_name']:
             continue
         n = norm(r['product_name'])
         if len(n) < 6:
             continue
-        hit = by_ins[r['insurer_legal_name']].get(n) or next((u for k, u in by_ins[r['insurer_legal_name']].items() if len(k) >= 8 and (k in n or n in k)), '')
+        hit = by_ins[r['insurer_legal_name']].get(n)  # exact normalised name only; substring matches spread wrong UINs
         if hit:
             r['uin'], r['uin_source'] = hit, 'sibling_doc_same_product'
+            if REGISTRY.get(hit):
+                r['product_name'], r['name_source'] = REGISTRY[hit], 'registry'
             if not r['category']:
                 r['category'] = category(hit, r['product_name'], r['insurer_legal_name'], r['doc_type'])
         missing = [k for k in ('uin', 'insurer_legal_name', 'product_name', 'category') if not r[k]]
@@ -224,4 +341,5 @@ def main():
     print(json.dumps({'total': len(out), **c, 'categories': collections.Counter(r['category'] for r in out)}, default=dict))
 
 
-main()
+if __name__ == "__main__":
+    main()
