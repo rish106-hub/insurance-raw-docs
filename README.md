@@ -17,5 +17,5 @@ collection (`robots_consulted: false`). Challenges are never solved by the tool.
 Rights: store and transform allowed for the prototype; serving or redistributing the documents is not
 (see `docs/source-rights-register.md` in insurance-data-api, FOR LEGAL REVIEW). Keep this repo private.
 
-Next step for a later agent: upload `docs/` to a private Supabase Storage bucket keyed by `sha256`,
-using `manifest.jsonl` as the index.
+Next step for a later agent: upload `docs/` to a private Cloudflare R2 bucket keyed by `sha256`, and load
+`catalog.csv` into a relational table pointing at each object. See `HANDOFF.md`.
