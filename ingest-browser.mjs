@@ -51,7 +51,7 @@ for (const r of map) {
       const m = meta.get(r.url) ?? {};
       appendFileSync(manifestPath, JSON.stringify({
         sha256: sha, path: rel, bytes: buf.length, content_type: 'application/pdf',
-        source_url: r.url, final_url: r.url, page_url: m.source_url ?? '',
+        source_url: r.url, final_url: r.url, page_url: m.source_url ?? r.page ?? '',
         insurer_legal_name: insurer, uin: m.uin ?? '', product_name: m.product_name ?? '',
         line: '', doc_type: m.doc_type ?? 'unknown', fetched_at: new Date().toISOString(),
         collection_method: 'browser_download', robots_consulted: false, parsed: false,
