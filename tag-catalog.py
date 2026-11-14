@@ -27,7 +27,7 @@ UIN_GENERAL_LOOSE = re.compile(r'\b([A-Z]{6,10}\d{5}V\d{6})\b')
 UIN_LIFE = re.compile(r'\b(\d{3}[A-Z]\d{3}V\d{2})\b')
 UIN_OLD = re.compile(r'\b(IRDAI?/(?:NL-)?HLT/[A-Z0-9]+/[A-Z\-]+/V\.?[IVX]+/\d+/\d{2,4}-\d{2,4})\b')
 
-GENERIC_NAMES = re.compile(r'^(download|view|click here|pdf|brochure|prospectus|policy wording[s]?|cis|customer information sheet|in case you are unable.*|.{0,2})$', re.I)
+GENERIC_NAMES = re.compile(r'^(download ?pdf|download now|download|view|click here|pdf|brochure|prospectus|policy wording[s]?|cis|customer information sheet|in case you are unable.*|.{0,2})$', re.I)
 DOC_WORDS = re.compile(r'\b(policy|wordings?|brochure|prospectus|cis|customer information sheet|proposal form|sales|leaflet|web|final|new|revised|updated|v ?\d+(\.\d+)?|uin.*)\b', re.I)
 
 
@@ -91,7 +91,8 @@ def name_from_text(text, uin):
             if uin in line.replace(' ', ''):
                 cand = re.split(r'\(?\s*UIN|\bUIN\b', line, flags=re.I)[0].strip(' :-–,|(')
                 cand = re.sub(r'^(product name|name of the (product|plan|policy))\s*[:\-]\s*', '', cand, flags=re.I)
-                if 4 <= len(cand) <= 90 and re.search(r'[A-Za-z]{3}', cand):
+                cand = cand.replace(uin, '').strip(' :-–,|(')
+                if 4 <= len(cand) <= 90 and len(re.findall(r'[A-Za-z]{3,}', cand)) >= 2:
                     return cand
     for line in text.splitlines()[:25]:
         l = line.strip()
@@ -181,6 +182,25 @@ def main():
         })
         if i % 200 == 0:
             print(f'{i}/{len(rows)}', file=sys.stderr)
+    # Inherit a UIN from a sibling document of the same insurer with the same product name.
+    norm = lambda x: re.sub(r'[^a-z0-9]+', ' ', (x or '').lower()).strip()
+    by_ins = collections.defaultdict(dict)
+    for r in out:
+        if r['uin'] and r['product_name']:
+            by_ins[r['insurer_legal_name']].setdefault(norm(r['product_name']), r['uin'])
+    for r in out:
+        if r['uin'] or not r['product_name']:
+            continue
+        n = norm(r['product_name'])
+        if len(n) < 6:
+            continue
+        hit = by_ins[r['insurer_legal_name']].get(n) or next((u for k, u in by_ins[r['insurer_legal_name']].items() if len(k) >= 8 and (k in n or n in k)), '')
+        if hit:
+            r['uin'], r['uin_source'] = hit, 'sibling_doc_same_product'
+            if not r['category']:
+                r['category'] = category(hit, r['product_name'], r['insurer_legal_name'], r['doc_type'])
+        missing = [k for k in ('uin', 'insurer_legal_name', 'product_name', 'category') if not r[k]]
+        r['tag_status'] = 'complete' if not missing else 'missing:' + '|'.join(missing)
     cols = list(out[0])
     with open(os.path.join(REPO, 'catalog.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=cols); w.writeheader(); w.writerows(out)
