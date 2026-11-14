@@ -152,13 +152,25 @@ def pick_uin(text, rider_doc):
 
 
 def name_from_url(url):
-    base = urllib.parse.unquote(url.split('?')[0].rstrip('/').split('/')[-1])
+    return clean_filename(urllib.parse.unquote(url.split('?')[0].rstrip('/').split('/')[-1]))
+
+
+def clean_filename(base):
+    """A file-name-like string ("POS_Easy_Bima_Sales_Literature_Final.pdf") to a plain name ("POS Easy Bima")."""
     base = re.sub(r'\.(pdf|docx?)$', '', base, flags=re.I)
     base = re.sub(r'_[0-9a-f]{10}$', '', base)            # strapi hash suffix
     base = re.sub(r'-\d{6,}$|_\d{8,}$', '', base)           # timestamps
-    base = re.sub(r'\d{3}[A-Z]\d{3}V\d{2}|[A-Z]{6,10}\d{5}V\d{6}', ' ', base)
+    base = re.sub(r'\d{3}[A-Z]\d{3}V\d{2}|[A-Z]{6,10}\d{5}V\d{6}', ' ', base, flags=re.I)
     base = re.sub(r'[_\-+]+', ' ', base)
+    base = re.sub(r'\(\d+\)', ' ', base)                                            # "optima super(1)"
+    base = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', base)                                  # "PolicyWordings" -> "Policy Wordings"
     base = DOC_WORDS.sub(' ', base)
+    # Leftover file-name noise: "cum literature", "Document(s)", "Final3", "lot 02", dates, versions, leading ids.
+    base = re.sub(r'\b(standard )?documents?\b|\bcum\b|\bliteratur\w*|\bfinal\d*\b|\blot \d+\b|\bpdf\b', ' ', base, flags=re.I)
+    base = re.sub(r'\b(policy )?bond\b|\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* \d{4}\b', ' ', base, flags=re.I)
+    base = re.sub(r'\b\d{1,2} \d{1,2} \d{4}\b|\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\d{2,4}\b|\bv\.?\d+(\.\d+)*\b', ' ', base, flags=re.I)
+    base = re.sub(r'\b(web|bro|brochure|sales|ver)\b|\b20\d{2}\b', ' ', base, flags=re.I)
+    base = re.sub(r'^\d{3,}\s+', '', base.strip())
     base = re.sub(r'\s+', ' ', base).strip(' .,-')
     return base
 
@@ -223,6 +235,56 @@ def category(uin, name, insurer, doc_type):
 REGISTRY = {}
 
 
+# Product-name junk: form placeholders, letters, registration lines, insurer-only names, generic doc words and
+# sentence fragments. A junk candidate is skipped so the next source (PDF text, title, URL, a sibling with the
+# same UIN) can supply the name; if every source is junk the name stays blank (never a guess).
+JUNK_NAME = re.compile(
+    r'<<|>>|«|»|policy ?holder|identification number|^sub\s*:|policy no\.?\s*\d|\birdai? reg|\bcin\s*[:\-]|^part [a-z]\s*[:\-]'
+    r'|your policy details|branch representative|^welcome to|promises ka partner|^dear\b|^in this policy|unless the context'
+    r'|^page \d|^table of contents|^contents$|^annexure\b|^schedule of\b|^(the )?list of\b'
+    r'|toll ?free|\b1[86]00[\s-]?\d|@|e-?mail\s*:|\?\s*$|^(and|or|of|to|for|with|by|from)\b|\bcopy\s*$', re.I)
+GENERIC_WORDS = {'policy', 'policies', 'wording', 'wordings', 'brochure', 'brochures', 'prospectus', 'cis', 'customer', 'information',
+                 'sheet', 'know', 'your', 'health', 'life', 'general', 'insurance', 'insurances', 'plan', 'plans', 'product', 'products',
+                 'document', 'documents', 'download', 'pdf', 'terms', 'and', 'conditions', 'sales', 'literature', 'leaflet', 'the',
+                 'of', 'company', 'limited', 'ltd', 'co', 'details', 'new', 'final', 'web', 'individual', 'group', 'retail'}
+INSURER_FILLER = {'insurance', 'life', 'general', 'company', 'limited', 'ltd', 'co', 'the', 'of', 'and'}
+FUNCTION_END = {'is', 'are', 'the', 'of', 'and', 'or', 'to', 'for', 'a', 'an', 'in', 'with', 'by', 'on', 'be', 'as', 'at', 'from', 'that'}
+
+
+def bad_name(name, insurer=''):
+    """True when a product-name candidate is not a usable product name."""
+    n = re.sub(r'\s+', ' ', (name or '')).strip(' .,:;-|')
+    if len(n) < 4 or JUNK_NAME.search(n) or LABEL_NAME.search(n):
+        return True
+    words = re.findall(r'[a-z0-9]+', n.lower())
+    if not words or len(words) > 12:
+        return True
+    insurer_words = set(re.findall(r'[a-z0-9]+', (insurer or '').lower()))
+    # Only doc words ("Policy Wording", "health"), or only the insurer's own name ("HDFC ERGO General Insurance").
+    if set(words) <= GENERIC_WORDS or set(words) <= insurer_words | INSURER_FILLER:
+        return True
+    ends_badly = words[-1] in FUNCTION_END and not (words[-1] == 'on' and len(words) > 1 and words[-2] == 'add')
+    if ends_badly or (len(words) > 6 and re.search(r'\b(is|are|shall|will|means|unless)\b', n, re.I)):
+        return True
+    return False
+
+
+def first_good_name(cands, insurer):
+    """First (name, source) whose name is not junk, else ('', '')."""
+    for n, src in cands:
+        n = n or ''
+        if '_' in n or (len(n) > 12 and ' ' not in n):
+            n = clean_filename(n)                                    # file-name-like titles and link texts
+        n = re.sub(r'^\d{1,3}\s+(?=[A-Za-z])', '', n.strip())     # list numbering "11 Accident Shield"
+        n = re.sub(r'(\s+(modified|view|download|pdf))+\s*$', '', n, flags=re.I)
+        n = re.sub(r'\(?\s*UIN\s*[:\-]?\s*\)?', ' ', n, flags=re.I)
+        n = re.sub(r'\d{3}[A-Z]\d{3}V\d{2}|[A-Z]{6,10}\d{5}V\d{6}', ' ', n, flags=re.I)
+        n = re.sub(r'\s+', ' ', n).strip(' .,:;-|–()')
+        if n and not bad_name(n, insurer):
+            return n, src
+    return '', ''
+
+
 def link_wins(cand, flat, pdf_uin):
     """A link-page or URL UIN is kept only if the PDF's first pages contain it or show no clear UIN.
     An old-format IRDA reference in the PDF does not beat a modern UIN on the link page or URL."""
@@ -234,7 +296,7 @@ def norm(x):
 
 
 # Doc-type words: a name made only of these ("policy wording", "brochures", "health") is shared by many products.
-DOC_WORDS = {'policy', 'wording', 'wordings', 'brochure', 'brochures', 'prospectus', 'cis', 'health', 'life',
+SIBLING_DOC_WORDS = {'policy', 'wording', 'wordings', 'brochure', 'brochures', 'prospectus', 'cis', 'health', 'life',
              'insurance', 'plan', 'form', 'forms', 'customer', 'information', 'sheet', 'document', 'documents',
              'sales', 'literature', 'terms', 'conditions', 'and', 'of', 'the', 'pdf', 'download', 'leaflet'}
 
@@ -249,9 +311,30 @@ def sibling_index(rows):
     out = collections.defaultdict(dict)
     for ins, d in names.items():
         for n, uins in d.items():
-            if len(uins) == 1 and set(n.split()) - DOC_WORDS:
+            if len(uins) == 1 and set(n.split()) - SIBLING_DOC_WORDS:
                 out[ins][n] = next(iter(uins))
     return out
+
+
+def fill_names(rows, url_names):
+    """Rows still without a usable name: the most common usable name of the insurer's other documents with the same
+    UIN (name_source 'sibling_uin'), else the cleaned URL file name, else blank."""
+    by_uin = collections.defaultdict(collections.Counter)
+    for r in rows:
+        if r['uin'] and r['product_name'] and r['name_source'] not in ('url', 'sibling_uin'):
+            by_uin[(r['insurer_legal_name'], r['uin'])][r['product_name']] += 1
+    for r, url_name in zip(rows, url_names):
+        if r['product_name']:
+            continue
+        names = by_uin.get((r['insurer_legal_name'], r['uin'])) if r['uin'] else None
+        if names:
+            r['product_name'], r['name_source'] = names.most_common(1)[0][0], 'sibling_uin'
+        elif url_name and not bad_name(url_name, r['insurer_legal_name']):
+            r['product_name'], r['name_source'] = url_name, 'url'
+        if not r['category']:
+            r['category'] = category(r['uin'], r['product_name'], r['insurer_legal_name'], r['doc_type'])
+        missing = [k for k in ('uin', 'insurer_legal_name', 'product_name', 'category') if not r[k]]
+        r['tag_status'] = 'complete' if not missing else 'missing:' + '|'.join(missing)
 
 
 def main():
@@ -260,6 +343,7 @@ def main():
     print(f'registry uins={len(REGISTRY)}', file=sys.stderr)
     rows = [json.loads(l) for l in open(os.path.join(REPO, 'manifest.jsonl')) if l.strip()]
     out = []
+    url_names = []
     for i, m in enumerate(rows):
         path = os.path.join(REPO, 'docs', m['path'])
         url = m.get('source_url', '')
@@ -289,12 +373,12 @@ def main():
             deep, _ = pdf_text(path, pages=60)
             uin, ambiguous = pick_uin(deep, rider_doc)
             uin_src = 'pdf_text_deep'
-        if not name and text:
-            name, name_src = name_from_text(text, uin), 'pdf_text'
-        if not name and title and not GENERIC_NAMES.match(title) and len(title) < 100 and not re.search(r'microsoft|untitled|\.docx?$', title, re.I):
-            name, name_src = title.strip(), 'pdf_title'
-        if not name:
-            name, name_src = name_from_url(url), 'url'
+        # First usable name: link page, PDF text, PDF title. The URL name is held for the post-pass, after a sibling
+        # document with the same UIN has had the chance to give a better one.
+        title_ok = title and not GENERIC_NAMES.match(title) and len(title) < 100 and not re.search(r'microsoft|untitled|\.docx?$', title, re.I)
+        name, name_src = first_good_name([(name, name_src), (name_from_text(text, uin) if text else '', 'pdf_text'),
+                                          (title if title_ok else '', 'pdf_title')], insurer)
+        url_names.append(name_from_url(url))
         if not uin:
             uin_src = 'ambiguous_pdf_text' if ambiguous else ''
         reg_name = REGISTRY.get(re.sub(r'\s+', '', uin).upper()) if uin else None
@@ -313,6 +397,7 @@ def main():
         if i % 200 == 0:
             print(f'{i}/{len(rows)}', file=sys.stderr)
     # Inherit a UIN from a sibling document of the same insurer with the same product name.
+    fill_names(out, url_names)
     by_ins = sibling_index(out)
     for r in out:
         if r['uin'] or not r['product_name']:
@@ -329,6 +414,10 @@ def main():
                 r['category'] = category(hit, r['product_name'], r['insurer_legal_name'], r['doc_type'])
         missing = [k for k in ('uin', 'insurer_legal_name', 'product_name', 'category') if not r[k]]
         r['tag_status'] = 'complete' if not missing else 'missing:' + '|'.join(missing)
+    write_catalog(out)
+
+
+def write_catalog(out):
     cols = list(out[0])
     with open(os.path.join(REPO, 'catalog.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=cols); w.writeheader(); w.writerows(out)
@@ -341,5 +430,19 @@ def main():
     print(json.dumps({'total': len(out), **c, 'categories': collections.Counter(r['category'] for r in out)}, default=dict))
 
 
+def refresh_names():
+    """--refresh-names: re-apply the name rules to the current catalog without re-reading PDFs. A name the rules now
+    reject is cleared and refilled by fill_names (same-UIN sibling, then the cleaned URL name, else blank)."""
+    out = [json.loads(l) for l in open(os.path.join(REPO, 'catalog.jsonl')) if l.strip()]
+    cleared = 0
+    for r in out:
+        if r['product_name'] and r['name_source'] != 'registry' and bad_name(r['product_name'], r['insurer_legal_name']):
+            r['product_name'], r['name_source'] = '', ''
+            cleared += 1
+    fill_names(out, [name_from_url(r['source_url']) for r in out])
+    print(f'refresh-names cleared={cleared}', file=sys.stderr)
+    write_catalog(out)
+
+
 if __name__ == "__main__":
-    main()
+    refresh_names() if '--refresh-names' in sys.argv else main()

@@ -53,5 +53,52 @@ class LinkWins(unittest.TestCase):
         self.assertFalse(tagger.link_wins('', 'ANY', ''))
 
 
+class ProductNames(unittest.TestCase):
+    insurer = 'HDFC Life Insurance Company Limited'
+
+    def test_junk_names_rejected(self):
+        for junk in ['<<Policyholder’s Name>>', '<<Master Policyholder’s Name>>', 'Sub: Your Policy no. 10023580', 'health', 'brochures',
+                     'Policy Wording', 'CUSTOMER INFORMATION SHEET / KNOW YOUR POLICY', 'IRDA Reg. No. 115 CIN: L67200MH2000PLC12940',
+                     'PART A: Covering Letter with Policy Schedule', 'Your Policy Details: Your Branch Representative Details:',
+                     'HDFC Life Insurance', 'Welcome to Axis Max Life Insurance', 'In this Policy, unless the context requires otherwise',
+                     'The list of covered critical illness surgical procedures and medical events is', 'A PLAN TO', 'Unique Identification Number',
+                     'Toll free \u2013 1800-200-5577 e-mail : service.helpdesk@example.test', 'Why should you buy this plan?', 'and Policy Term',
+                     'CHL Product Wealth Edge Plan copy']:
+            self.assertTrue(tagger.bad_name(junk, self.insurer), junk)
+
+    def test_real_names_kept(self):
+        for good in ['HDFC Life Sanchay Plus', 'Domestic Staff Insurance Add-On', 'Star Group Health Insurance', 'Arogya Sanjeevani Policy',
+                     'Assignment Form', 'my Optima Secure', 'Accident Care Gold Insurance']:
+            self.assertFalse(tagger.bad_name(good, 'Star Health and Allied Insurance Company Limited'), good)
+
+    def test_first_good_name_skips_junk_and_strips_uin(self):
+        self.assertEqual(tagger.first_good_name([('<<Policyholder’s Name>>', 'link_page'), ('Health Protector 110N039V02 T&C', 'pdf_text')], self.insurer),
+                         ('Health Protector T&C', 'pdf_text'))
+        self.assertEqual(tagger.first_good_name([('health', 'a'), ('', 'b')], self.insurer), ('', ''))
+
+    def test_url_names_cleaned(self):
+        self.assertEqual(tagger.name_from_url('https://x/smart-lifelong-plan-136l032v03.pdf'), 'smart lifelong plan')
+        self.assertEqual(tagger.name_from_url('https://x/PolicyWordings_Pre-PostHospitalizationMultiplierAdd-onCover.pdf'), 'Pre Post Hospitalization Multiplier Add on Cover')
+
+    def test_file_like_titles_and_link_noise_cleaned(self):
+        cases = {'POS_Easy_Bima_Sales_Literature_Final': 'POS Easy Bima', '23687_Pension4Life_Web_Bro_2024': 'Pension4Life',
+                 '11 Accident Shield RSAPAIP05002V020405 Modified View View View View': 'Accident Shield',
+                 'Protection Series Policy Document_': 'Protection Series'}
+        for raw, want in cases.items():
+            self.assertEqual(tagger.first_good_name([(raw, 'pdf_title')], 'Synthetic Insurance')[0], want, raw)
+
+    def test_fill_names_prefers_same_uin_sibling_then_url(self):
+        rows = [
+            {'insurer_legal_name': self.insurer, 'uin': '101N097V08', 'product_name': 'HDFC Life Click 2 Invest', 'name_source': 'link_page', 'category': 'life_ulip', 'doc_type': 'brochure', 'tag_status': 'complete'},
+            {'insurer_legal_name': self.insurer, 'uin': '101N097V08', 'product_name': '', 'name_source': '', 'category': 'life_ulip', 'doc_type': 'wording', 'tag_status': 'missing:product_name'},
+            {'insurer_legal_name': self.insurer, 'uin': '', 'product_name': '', 'name_source': '', 'category': 'life_other', 'doc_type': 'other', 'tag_status': 'missing:uin|product_name'},
+            {'insurer_legal_name': self.insurer, 'uin': '', 'product_name': '', 'name_source': '', 'category': 'life_other', 'doc_type': 'other', 'tag_status': 'missing:uin|product_name'},
+        ]
+        tagger.fill_names(rows, ['', 'ignored-url', 'hdfc-life-sampoorn-nivesh.pdf', 'brochures.pdf'])
+        self.assertEqual((rows[1]['product_name'], rows[1]['name_source'], rows[1]['tag_status']), ('HDFC Life Click 2 Invest', 'sibling_uin', 'complete'))
+        self.assertEqual((rows[2]['product_name'], rows[2]['name_source']), ('hdfc-life-sampoorn-nivesh.pdf', 'url'))
+        self.assertEqual(rows[3]['product_name'], '', 'a junk URL name stays blank')
+
+
 if __name__ == '__main__':
     unittest.main()
