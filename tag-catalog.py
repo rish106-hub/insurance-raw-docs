@@ -418,6 +418,10 @@ def main():
 
 
 def write_catalog(out):
+    # One row per PDF: the same bytes reached through two links (5 cases) keep the first row, so loaders do not
+    # flip a stored key between two names on every run.
+    seen = set()
+    out = [r for r in out if not (r['sha256'] in seen or seen.add(r['sha256']))]
     cols = list(out[0])
     with open(os.path.join(REPO, 'catalog.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=cols); w.writeheader(); w.writerows(out)
