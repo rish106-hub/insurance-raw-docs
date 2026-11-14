@@ -39,6 +39,9 @@ def clean_name(n, uin):
     n = re.sub(re.escape(uin), ' ', n or '', flags=re.I)
     n = re.sub(r'\d{3}[A-Z]\d{3}V\d{2}|[A-Z]{6,10}\d{5}V\d{6}', ' ', n)
     n = re.sub(r'[_]+', ' ', n)
+    n = re.sub(r'\.(cdr|pdf|docx?|indd|ai)\b', ' ', n, flags=re.I)                       # file extensions in titles
+    n = re.sub(r'^\s*(policy\s*(document|wordings?|bond)|brochure|prospectus)\s+(for|of)\s+', '', n, flags=re.I)
+    n = re.sub(r'[-–\s]+(brochure|prospectus|policy\s*(bond|document|wordings?)|offline|online|v\s*\d+(\.\d+)*)\b.*$', '', n, flags=re.I)
     n = re.sub(r'^\s*(product\s*name|name of the (product|plan|policy)|policy\s*document|plan\s*name)\s*[:\-–]\s*', '', n, flags=re.I)
     n = n.replace('>', ' ').replace('<', ' ')
     for _ in range(3):
